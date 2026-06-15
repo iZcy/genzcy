@@ -2,360 +2,299 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GenZCY — Build With Vibe Curriculum</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>GenZCY — Build With Vibe</title>
 <style>
-:root {
-  --bg: #ffffff; --card: #f8f9fa; --accent: #2b6cb0; --accent2: #1a365d;
-  --green: #276749; --yellow: #d69e2e; --red: #c53030;
-  --text: #1a202c; --text-dim: #718096; --border: #e2e8f0;
-}
-* { margin:0;padding:0;box-sizing:border-box; }
-body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; padding:24px; font-size:13.5px; }
-.container { max-width:1200px; margin:0 auto; }
-h1 { font-size:26px; margin-bottom:2px; color:var(--accent2); }
-.subtitle { color:var(--text-dim); margin-bottom:16px; font-size:14px; }
-
-.wf { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:10px 16px; margin-bottom:14px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; font-size:13px; }
-.wf-title { color:var(--accent); font-weight:600; white-space:nowrap; }
-.wf-s { background:var(--bg); padding:3px 10px; border-radius:5px; border:1px solid var(--border); white-space:nowrap; font-size:12px; }
-.wf-s .n { color:var(--accent); font-weight:700; }
-.wf-s .h { color:var(--accent); font-weight:600; }
-
-.tw { overflow-x:auto; border-radius:8px; border:1px solid var(--border); margin-bottom:16px; }
-.tw::-webkit-scrollbar { height:8px; }
-.tw::-webkit-scrollbar-track { background:var(--card); border-radius:4px; }
-.tw::-webkit-scrollbar-thumb { background:#cbd5e0; border-radius:4px; }
-table { width:100%; border-collapse:collapse; background:var(--bg); min-width:1050px; }
-th { background:var(--card); padding:10px 8px; text-align:left; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:var(--accent2); border-bottom:2px solid var(--accent); position:sticky; top:0; z-index:2; }
-td { padding:9px 8px; border-bottom:1px solid var(--border); border-right:1px solid var(--border); vertical-align:top; font-size:12.5px; line-height:1.5; }
-td:last-child { border-right:none; }
-tr:hover td { background:var(--card); }
-.wk { text-align:center; font-weight:700; color:var(--accent); font-size:16px; }
-.ly { font-weight:600; color:var(--accent2); font-size:12px; }
-.us { font-size:12px; color:var(--text-dim); line-height:1.4; }
-.tag { display:inline-block; font-size:9.5px; padding:1px 6px; border-radius:3px; margin-right:2px; font-weight:600; }
-.t-c { background:#bee3f8; color:#2b6cb0; }
-.t-s { background:#c6f6d5; color:#276749; }
-.t-b { background:#fefcbf; color:#975a16; }
-.h { color:var(--accent); font-weight:600; }
-.e { color:var(--red); font-size:11px; }
-.out { font-size:11.5px; color:var(--text-dim); font-style:italic; }
-.gap td { height:4px; background:transparent; border:none; padding:0; }
-.lg { display:flex; gap:16px; flex-wrap:wrap; font-size:12px; color:var(--text-dim); margin-bottom:14px; }
-.tr-fe { color:var(--accent); font-weight:600; }
-.tr-be { color:#d69e2e; font-weight:600; }
-.tr-do { color:var(--green); font-weight:600; }
-
-h2 { font-size:18px; color:var(--accent2); margin:24px 0 10px; padding-bottom:4px; border-bottom:2px solid var(--accent); font-weight:600; }
-h3 { font-size:14px; color:var(--accent); margin:14px 0 6px; font-weight:600; }
-.sec-imp { margin-bottom:10px; }
-
-.card { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 14px; margin-bottom:10px; font-size:13px; }
-.card-sm { background:var(--card); border:1px solid var(--border); border-radius:6px; padding:8px 10px; font-size:12px; }
-.grid-4 { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-bottom:10px; }
-.grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; margin-bottom:10px; }
-.gi { background:var(--card); border:1px solid var(--border); border-radius:5px; padding:6px 8px; font-size:11.5px; }
-.gi .num { color:var(--accent); font-weight:700; margin-right:3px; }
-.gi .nm { font-weight:600; }
-.gi .w { color:var(--text-dim); font-size:10px; margin-left:3px; }
-.gi .why { display:block; color:var(--text-dim); font-size:10.5px; margin-top:2px; }
-
-.diag { display:flex; flex-direction:column; gap:5px; margin-bottom:10px; }
-.di { background:var(--card); border:1px solid var(--border); border-radius:5px; padding:8px 12px; border-left:3px solid var(--accent); font-size:12px; }
-.di-t { font-weight:600; color:var(--accent2); font-size:12px; }
-.di-s { margin-top:2px; }
-.di-q { color:var(--text-dim); font-size:11px; font-style:italic; margin-top:1px; }
-
-.tk { width:100%; border-collapse:collapse; font-size:12px; }
-.tk th { background:var(--card); padding:6px 8px; text-align:left; font-weight:600; color:var(--accent2); border-bottom:2px solid var(--accent); font-size:11px; }
-.tk td { padding:5px 8px; border-bottom:1px solid var(--border); font-size:11.5px; }
-.tpl { background:var(--card); border:1px solid var(--border); border-radius:6px; padding:10px 12px; font-family:"SF Mono","Consolas",monospace; font-size:11px; color:var(--text); line-height:1.6; white-space:pre; overflow-x:auto; }
-
-.sum { margin-top:16px; padding:10px 14px; background:var(--card); border:1px solid var(--border); border-radius:8px; font-size:13px; display:flex; gap:20px; flex-wrap:wrap; }
-.sum strong { color:var(--accent2); }
-
-details { margin-bottom:8px; }
-details summary { cursor:pointer; font-weight:600; color:var(--accent); font-size:13px; padding:6px 0; }
-details summary:hover { opacity:0.8; }
-details[open] summary { margin-bottom:6px; }
+:root{--bg:#fff;--card:#f8f9fa;--accent:#2b6cb0;--accent2:#1a365d;--green:#276749;--yellow:#d69e2e;--red:#c53030;--text:#1a202c;--td:#718096;--br:#e2e8f0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);padding:24px;font-size:13px}
+.c{max-width:1440px;margin:0 auto}
+h1{font-size:24px;margin-bottom:2px;color:var(--accent2);font-weight:700}
+.sub{color:var(--td);margin-bottom:14px;font-size:13.5px}
+.tw{overflow-x:auto;border-radius:8px;border:1px solid var(--br);margin-bottom:16px}
+table{width:100%;border-collapse:collapse;background:var(--bg);min-width:1300px}
+th{background:var(--card);padding:9px 7px;text-align:left;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--accent2);border-bottom:2px solid var(--accent);position:sticky;top:0;z-index:2;white-space:nowrap}
+td{padding:8px 7px;border-bottom:1px solid var(--br);border-right:1px solid var(--br);vertical-align:top;font-size:11.5px;line-height:1.5}
+td:last-child{border-right:none}
+tr:hover td{background:var(--card)}
+.tw::-webkit-scrollbar{height:8px}
+.tw::-webkit-scrollbar-track{background:var(--card);border-radius:4px}
+.tw::-webkit-scrollbar-thumb{background:#cbd5e0;border-radius:4px}
+.wk{text-align:center;font-weight:700;color:var(--accent);font-size:15px}
+.w{color:var(--td);font-size:10.5px;font-style:italic;line-height:1.4}
+.ly{font-weight:600;color:var(--accent2);font-size:12px}
+.ph{font-size:10px;padding:2px 6px;border-radius:3px;color:#fff;font-weight:600;display:inline-block;margin-bottom:3px}
+.ph-a{background:var(--accent)}.ph-v{background:#d69e2e}.ph-o{background:var(--green)}.ph-p{background:var(--accent2)}.ph-e{background:var(--red)}
+.cn{font-size:10.5px;color:var(--td)}
+.cn b{color:var(--accent)}
+.tag{display:inline-block;font-size:9px;padding:1px 5px;border-radius:3px;margin-right:2px;font-weight:600}
+.t-c{background:#bee3f8;color:#2b6cb0}.t-s{background:#c6f6d5;color:#276749}.t-b{background:#fefcbf;color:#975a16}
+.h{color:var(--accent);font-weight:600}
+.e{color:var(--red);font-size:10.5px}
+.ot{font-size:11px;color:var(--td);font-style:italic}
+.tk{font-size:10px;display:block;color:var(--accent2);opacity:.7;margin-top:3px}
+.com{font-size:10.5px;color:var(--accent)}
+.sum{background:var(--card);border:1px solid var(--br);border-radius:8px;padding:10px 14px;font-size:13px;display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px}
+.sum strong{color:var(--accent2)}
+.wf{background:var(--card);border:1px solid var(--br);border-radius:8px;padding:8px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px}
+.wf-t{font-weight:600;color:var(--accent);font-size:12px;white-space:nowrap}
+.wf-s{background:var(--bg);padding:2px 8px;border-radius:4px;border:1px solid var(--br);white-space:nowrap;font-size:11.5px}
+.wf-s .n{color:var(--accent);font-weight:700}
+.wf-s .h{color:var(--accent)}
+.cyc{background:var(--card);border:1px solid var(--br);border-radius:8px;padding:8px 14px;margin-bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:11.5px}
+.cyc-t{font-weight:600;color:var(--accent2);white-space:nowrap}
+.cyc-s{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+.cyc-b{padding:2px 8px;border-radius:4px;font-size:10.5px;font-weight:600;color:#fff}
+.cyc-a{background:var(--accent)}.cyc-v{background:#d69e2e}.cyc-o{background:var(--green)}.cyc-p{background:var(--accent2)}.cyc-e{background:var(--red)}
+.gf{margin-bottom:12px;font-size:11.5px;color:var(--td);line-height:1.6}
+.gf b{color:var(--accent)}
+details{margin-bottom:8px}
+details summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:13px;padding:4px 0}
+details summary:hover{opacity:.8}
+details[open] summary{margin-bottom:6px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-bottom:10px}
+.gi{background:var(--card);border:1px solid var(--br);border-radius:5px;padding:5px 7px;font-size:11px}
+.gi .num{color:var(--accent);font-weight:700;margin-right:2px}
+.gi .nm{font-weight:600}
+.gi .w{color:var(--td);font-size:9.5px;margin-left:2px}
+.gi .why{display:block;color:var(--td);font-size:10px;margin-top:1px}
 </style>
-</head><body><div class="container">
+</head>
+<body><div class="c">
 
 <h1>GenZCY — Build With Vibe</h1>
-<div class="subtitle">4 weeks · 8 sessions × 2h · 1-on-1 · you describe, AI builds, you learn</div>
+<div class="sub">4 weeks · 8 sessions × 2h · 1-on-1 · you describe, AI builds, you learn · <strong style="color:var(--accent)">one table = full curriculum</strong></div>
 
-
-<div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px">
-  <span style="font-weight:600;color:var(--accent2)">📋 Curriculum Flow</span>
-  <span style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
-    <span style="background:var(--accent);color:white;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:600">1. Analyze</span>
-    <span style="color:var(--text-dim)">→</span>
-    <span style="background:#d69e2e;color:white;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:600">2. Vision &amp; Goals</span>
-    <span style="color:var(--text-dim)">→</span>
-    <span style="background:var(--green);color:white;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:600">3. Organize</span>
-    <span style="color:var(--text-dim)">→</span>
-    <span style="background:var(--accent2);color:white;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:600">4. Plan Sessions</span>
-    <span style="color:var(--text-dim)">→</span>
-    <span style="background:var(--red);color:white;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:600">5. Evaluate &amp; Loop</span>
-  </span>
+<!-- Cycle -->
+<div class="cyc">
+<span class="cyc-t">📋 Curriculum Cycle</span>
+<span class="cyc-s">
+<span class="cyc-b cyc-a">1. Analyze</span><span style="color:var(--td)">→</span>
+<span class="cyc-b cyc-v">2. Vision &amp; Goals</span><span style="color:var(--td)">→</span>
+<span class="cyc-b cyc-o">3. Organize</span><span style="color:var(--td)">→</span>
+<span class="cyc-b cyc-p">4. Plan Sessions</span><span style="color:var(--td)">→</span>
+<span class="cyc-b cyc-e">5. Evaluate &amp; Loop</span>
+</span>
 </div>
+
+<!-- Workflow -->
 <div class="wf">
-<span class="wf-title">Every Session</span>
+<span class="wf-t">Every Session</span>
 <span class="wf-s"><span class="n">1</span> Open VS Code → run OpenCode</span>
 <span class="wf-s"><span class="n">2</span> Type your <span class="h">prompt</span></span>
 <span class="wf-s"><span class="n">3</span> AI builds it</span>
-<span class="wf-s"><span class="n">4</span> <span class="h">Read</span> the code in VS Code</span>
+<span class="wf-s"><span class="n">4</span> <span class="h">Read</span> code in VS Code</span>
 <span class="wf-s"><span class="n">5</span> Test + observe</span>
 <span class="wf-s"><span class="n">6</span> Auto-commit + push → GitHub</span>
 </div>
 
-<div class="lg">
-<span>■ <span class="tag t-c">C</span> Concept</span>
-<span>■ <span class="tag t-s">S</span> SEE / inspect</span>
-<span>■ <span class="tag t-b">B</span> BUILD via prompt</span>
-<span>■ <span style="color:var(--red)">✕</span> Errors you learn to fix</span>
-<span>■ <span class="tr-fe">Frontend</span> · <span class="tr-be">Backend</span> · <span class="tr-do">DevOps</span></span>
+<!-- Quick ref legend -->
+<div class="gf">
+<span class="tag t-c">C</span> Concept · <span class="tag t-s">S</span> SEE/inspect · <span class="tag t-b">B</span> BUILD via prompt · <span class="e">✕</span> Errors you learn to fix · <span class="ph ph-a">1</span> <span class="ph ph-v">2</span> <span class="ph ph-o">3</span> <span class="ph ph-p">4</span> <span class="ph ph-e">5</span> = PDF Curriculum Cycle phases · <span class="tk">🔧</span> Toolkit skill · <span class="com">🤝</span> Community/Scale link
 </div>
 
+<!-- ══════ MAIN TABLE ══════ -->
 <div class="tw"><table>
-<colgroup><col style="width:36px"><col style="width:28px"><col style="width:24px"><col style="width:130px"><col style="width:100px"><col style="width:16%"><col style="width:16%"><col style="width:16%"><col></colgroup>
+<colgroup>
+<col style="width:32px"><col style="width:24px"><col style="width:22px">
+<col style="width:120px"><col style="width:50px"><col style="width:55px"><col style="width:70px">
+<col style="width:17%"><col style="width:17%"><col style="width:17%"><col></colgroup>
 <thead><tr>
-<th>Wk</th><th>#</th><th>Hr</th><th style="color:var(--yellow)">🎯 User Story</th><th>Layer</th>
-<th><span class="tr-fe">Frontend</span></th>
-<th><span class="tr-be">Backend</span></th>
-<th><span class="tr-do">DevOps</span></th>
-<th>Outcome</th>
-</tr></thead><tbody>
+<th>Wk</th><th>#</th><th>Hr</th>
+<th>🎯 User Story</th><th>Phase</th><th>Concepts</th><th>Layer</th>
+<th>Frontend</th><th>Backend</th><th>DevOps</th><th>Outcome</th>
+</tr></thead>
+<tbody>
+
+<!-- S1 -->
 <tr>
-  <td class="wk" rowspan="2">W1</td><td>1</td><td style="text-align:center;color:var(--text-dim)">2h</td><td class="us">"I want to understand what makes a website work and set up my toolbox"</td><td class="ly">How the Web<br>Works</td>
-  <td><span class="tag t-c">C</span> What a webpage is (HTML/CSS)<br><span class="tag t-s">S</span> Open any site, see its structure<br><span class="tag t-b">B</span> <span class="h">"Build my homepage with hero section"</span><br><span class="e">✕ Broken images, missing content</span></td>
-  <td><span class="tag t-c">C</span> Client-server (your browser talks to a computer far away)<br><span class="tag t-s">S</span> See the request waterfall in your browser<br><span class="tag t-b">B</span> <span class="h">"Set up a local server for my site"</span><br><span class="e">✕ "Command not found" errors</span></td>
-  <td><span class="tag t-c">C</span> Git = save points · GitHub = cloud backup<br><span class="tag t-s">S</span> See your project files in VS Code<br><span class="tag t-b">B</span> <span class="h">"Save my work and push to GitHub"</span><br><span class="e">✕ First merge conflict (fix with AI)</span></td>
-  <td class="out">GitHub repo ready · first site live · can explain how the web works</td>
+<td class="wk" rowspan="2">W1</td>
+<td>1</td><td style="text-align:center;color:var(--td)">2h</td>
+<td class="w">"I want to understand what makes a website work and set up my toolbox"</td>
+<td><span class="ph ph-a">1</span> <span class="ph ph-p">4</span></td>
+<td class="cn"><b>1</b> Client-Server<br><b>2</b> HTTP Lifecycle</td>
+<td class="ly">How the Web<br>Works</td>
+<td><span class="tag t-c">C</span> What a webpage is (HTML/CSS)<br><span class="tag t-s">S</span> Open any site, see its structure<br><span class="tag t-b">B</span> <span class="h">"Build my homepage with hero section"</span><br><span class="e">✕ Broken images, missing content</span></td>
+<td><span class="tag t-c">C</span> Client-server: your browser talks to a computer far away<br><span class="tag t-s">S</span> See the request waterfall in your browser<br><span class="tag t-b">B</span> <span class="h">"Set up a local server for my site"</span><br><span class="e">✕ "Command not found" errors</span></td>
+<td><span class="tag t-c">C</span> Git = save points · GitHub = cloud backup<br><span class="tag t-s">S</span> See your project files in VS Code<br><span class="tag t-b">B</span> <span class="h">"Save my work and push to GitHub"</span><br><span class="e">✕ First merge conflict (fix with AI)</span></td>
+<td class="ot">GitHub repo ready · first site live · can explain how the web works</td>
 </tr>
+
+<!-- S2 -->
 <tr>
-  <td>2</td><td style="text-align:center;color:var(--text-dim)">2h</td><td class="us">"I want my own web address and my mentor to see my progress"</td><td class="ly">Domain +<br>Feedback Loop</td>
-  <td><span class="tag t-c">C</span> HTTPS = secure (lock icon in browser)<br><span class="tag t-s">S</span> See SSL certificate on any secure site<br><span class="tag t-b">B</span> <span class="h">"Add HTTPS to my dev server"</span><br><span class="e">✕ SSL mismatch warning</span></td>
-  <td><span class="tag t-c">C</span> Domain = your address · DNS = phonebook<br><span class="tag t-s">S</span> Look up DNS records with simple tools<br><span class="tag t-b">B</span> <span class="h">"Buy my domain and point it to my server"</span><br><span class="e">✕ DNS doesn't resolve (wait or fix)</span></td>
-  <td><span class="tag t-c">C</span> PromptAudit = mentor reviews your prompts<br><span class="tag t-s">S</span> See your own prompt history<br><span class="tag t-b">B</span> <span class="h">"Turn on PromptAudit and review my first prompts"</span><br><span class="e">✕ Proxy not connected</span></td>
-  <td class="out">Domain secured · mentor can see your prompts · every push tracked</td>
+<td>2</td><td style="text-align:center;color:var(--td)">2h</td>
+<td class="w">"I want my own web address and my mentor to see my progress"</td>
+<td><span class="ph ph-p">4</span> <span class="ph ph-e">5</span></td>
+<td class="cn"><b>10</b> Env &amp; Secrets<br><b>12</b> Monitoring</td>
+<td class="ly">Domain +<br>Feedback Loop</td>
+<td><span class="tag t-c">C</span> HTTPS = secure (lock icon)<br><span class="tag t-s">S</span> See SSL cert on any secure site<br><span class="tag t-b">B</span> <span class="h">"Add HTTPS to my dev server"</span><br><span class="e">✕ SSL mismatch warning</span></td>
+<td><span class="tag t-c">C</span> Domain = address · DNS = phonebook<br><span class="tag t-s">S</span> Look up DNS records<br><span class="tag t-b">B</span> <span class="h">"Buy my domain and point it to my server"</span><br><span class="e">✕ DNS doesn't resolve</span></td>
+<td><span class="tag t-c">C</span> PromptAudit = mentor reviews your prompts<br><span class="tag t-s">S</span> See your own prompt history<br><span class="tag t-b">B</span> <span class="h">"Turn on PromptAudit, review my first prompts"</span><br><span class="e">✕ Proxy not connected</span><br><span class="tk">🔧 Toolkit: .env, secrets</span></td>
+<td class="ot">Domain secured · mentor can see every prompt · each push tracked</td>
 </tr>
+
+<!-- S3 -->
 <tr>
-  <td class="wk" rowspan="2">W2</td><td>3</td><td style="text-align:center;color:var(--text-dim)">2h</td><td class="us">"I want my site to look professional and reflect my brand"</td><td class="ly">Brand +<br>Layout</td>
-  <td><span class="tag t-c">C</span> Structure + style = your brand identity<br><span class="tag t-s">S</span> Inspect ANY site's layout, colors, fonts<br><span class="tag t-b">B</span> <span class="h">"Build my landing page with my brand colors, logo, services"</span><br><span class="e">✕ CSS not applying, layout breaks on mobile</span></td>
-  <td><span class="tag t-c">C</span> Static vs dynamic (hardcoded vs live data)<br><span class="tag t-s">S</span> See what files load when you visit a page<br><span class="tag t-b">B</span> <span class="h">— (focus on frontend)</span><br><span class="e">✕ —</span></td>
-  <td><span class="tag t-c">C</span> Reading what changed (git diff)<br><span class="tag t-s">S</span> Compare your current code vs your last save<br><span class="tag t-b">B</span> <span class="h">"Review my commit history — what did each prompt change?"</span><br><span class="e">✕ Forgot to commit (lost changes)</span></td>
-  <td class="out">Professional landing page · works on phone + desktop · you read code changes</td>
+<td class="wk" rowspan="2">W2</td>
+<td>3</td><td style="text-align:center;color:var(--td)">2h</td>
+<td class="w">"I want my site to look professional and reflect my brand"</td>
+<td><span class="ph ph-o">3</span> <span class="ph ph-p">4</span></td>
+<td class="cn"><b>3</b> Frontend vs Backend<br><b>8</b> State Management</td>
+<td class="ly">Brand +<br>Layout</td>
+<td><span class="tag t-c">C</span> Structure + style = your brand identity<br><span class="tag t-s">S</span> Inspect ANY site's layout/colors/fonts<br><span class="tag t-b">B</span> <span class="h">"Build my landing page with brand colors, logo, services"</span><br><span class="e">✕ CSS breaks on mobile, layout not responsive</span></td>
+<td><span class="tag t-c">C</span> Static vs dynamic content<br><span class="tag t-s">S</span> See what files load when you visit a page<br><span class="tag t-b">B</span> <span class="h">—</span> (focus frontend this session)<br><span class="e">✕ —</span></td>
+<td><span class="tag t-c">C</span> Reading code changes (git diff)<br><span class="tag t-s">S</span> Compare current code vs last save<br><span class="tag t-b">B</span> <span class="h">"Review commit history — what did each prompt change?"</span><br><span class="e">✕ Forgot to commit (lost changes)</span><br><span class="tk">🔧 Toolkit: git diff</span></td>
+<td class="ot">Professional landing page · works on phone + desktop · you can read diffs</td>
 </tr>
+
+<!-- S4 -->
 <tr>
-  <td>4</td><td style="text-align:center;color:var(--text-dim)">2h</td><td class="us">"I want visitors to click, scroll, and explore my site"</td><td class="ly">Interaction +<br>Reusable Parts</td>
-  <td><span class="tag t-c">C</span> Buttons, menus, forms — things that move<br><span class="tag t-s">S</span> See JavaScript errors with line numbers<br><span class="tag t-b">B</span> <span class="h">"Add a mobile menu, testimonial slider, and pricing cards"</span><br><span class="e">✕ TypeError — null is not an object</span></td>
-  <td><span class="tag t-c">C</span> Client vs server — what runs where<br><span class="tag t-s">S</span> See AJAX calls in your browser<br><span class="tag t-b">B</span> <span class="h">"Create a simple data endpoint for testimonials"</span><br><span class="e">✕ CORS error (browser blocks cross-origin)</span></td>
-  <td><span class="tag t-c">C</span> Branches = safe experiments<br><span class="tag t-s">S</span> See a pull request on GitHub<br><span class="tag t-b">B</span> <span class="h">"Build the slider on a feature branch, then merge"</span><br><span class="e">✕ Merge conflict (resolve with AI)</span></td>
-  <td class="out">Interactive site · 3 reusable components · can trace errors to a line number</td>
+<td>4</td><td style="text-align:center;color:var(--td)">2h</td>
+<td class="w">"I want visitors to click, scroll, and explore my site"</td>
+<td><span class="ph ph-p">4</span> <span class="ph ph-e">5</span></td>
+<td class="cn"><b>8</b> State Mgmt (cont.)<br><b>9</b> Error Handling</td>
+<td class="ly">Interaction +<br>Reusable Parts</td>
+<td><span class="tag t-c">C</span> Buttons, menus, forms — things that move<br><span class="tag t-s">S</span> See JS errors with line numbers<br><span class="tag t-b">B</span> <span class="h">"Add a mobile menu, testimonial slider, pricing cards"</span><br><span class="e">✕ TypeError — null is not an object</span></td>
+<td><span class="tag t-c">C</span> Client vs server — what runs where<br><span class="tag t-s">S</span> See AJAX/fetch calls in your browser<br><span class="tag t-b">B</span> <span class="h">"Create a data endpoint for testimonials"</span><br><span class="e">✕ CORS error (browser blocks cross-origin)</span></td>
+<td><span class="tag t-c">C</span> Branches = safe experiments<br><span class="tag t-s">S</span> See a pull request on GitHub<br><span class="tag t-b">B</span> <span class="h">"Build slider on a feature branch, then merge"</span><br><span class="e">✕ Merge conflict (resolve with AI)</span></td>
+<td class="ot">Interactive site · 3 reusable components · can trace errors to a line</td>
 </tr>
+
+<!-- S5 -->
 <tr>
-  <td class="wk" rowspan="2">W3</td><td>5</td><td style="text-align:center;color:var(--text-dim)">2h</td><td class="us">"I want to store my business data and show it live on my site"</td><td class="ly">Your Data +<br>Your Database</td>
-  <td><span class="tag t-c">C</span> Displaying live data from your database<br><span class="tag t-s">S</span> See API response data appear on your page<br><span class="tag t-b">B</span> <span class="h">"Show my services list from the database on my homepage"</span><br><span class="e">✕ Data not showing (wrong field name)</span></td>
-  <td><span class="tag t-c">C</span> Database = your filing cabinet · tables, records, relationships<br><span class="tag t-s">S</span> Open your DB and SEE your data in table form<br><span class="tag t-b">B</span> <span class="h">"Model: Customer books Service. Add API to create/read."</span><br><span class="e">✕ Stack trace — read the file and line number</span></td>
-  <td><span class="tag t-c">C</span> Environment variables (.env) = configuration, not code<br><span class="tag t-s">S</span> Read your .env file (DB credentials live here)<br><span class="tag t-b">B</span> <span class="h">"Move database config to .env and hide from GitHub"</span><br><span class="e">✕ .env missing or not loaded</span></td>
-  <td class="out">Database with real business data · API endpoints · can read error messages</td>
+<td class="wk" rowspan="2">W3</td>
+<td>5</td><td style="text-align:center;color:var(--td)">2h</td>
+<td class="w">"I want to store my business data and show it live on my site"</td>
+<td><span class="ph ph-o">3</span> <span class="ph ph-p">4</span></td>
+<td class="cn"><b>4</b> Data Modeling<br><b>5</b> CRUD<br><b>6</b> API (REST)</td>
+<td class="ly">Your Data +<br>Database</td>
+<td><span class="tag t-c">C</span> Displaying live data from your database<br><span class="tag t-s">S</span> See API response data appear on your page<br><span class="tag t-b">B</span> <span class="h">"Show my services from the database on my homepage"</span><br><span class="e">✕ Data not showing (wrong field name)</span></td>
+<td><span class="tag t-c">C</span> Database = filing cabinet · tables, records, relationships<br><span class="tag t-s">S</span> Open your DB and SEE your data in tables<br><span class="tag t-b">B</span> <span class="h">"Model: Customer books Service. Add create/read API."</span><br><span class="e">✕ Stack trace — read the file and line number</span></td>
+<td><span class="tag t-c">C</span> Env variables (.env) = config, not code<br><span class="tag t-s">S</span> Read your .env file — DB credentials live here<br><span class="tag t-b">B</span> <span class="h">"Move DB config to .env, hide from GitHub"</span><br><span class="e">✕ .env missing or not loaded</span><br><span class="tk">🔧 Toolkit: DB browser, .env</span></td>
+<td class="ot">Database with real data · API endpoints · can read error messages</td>
 </tr>
+
+<!-- S6 -->
 <tr>
-  <td>6</td><td style="text-align:center;color:var(--text-dim)">2h</td><td class="us">"I want customers to log in and I get notified on WhatsApp"</td><td class="ly">Logins +<br>Outside Connections</td>
-  <td><span class="tag t-c">C</span> Login page for customers<br><span class="tag t-s">S</span> See auth token in browser storage<br><span class="tag t-b">B</span> <span class="h">"Add a login page and protect the booking form"</span><br><span class="e">✕ Login loop · token expired</span></td>
-  <td><span class="tag t-c">C</span> Authentication (passwords/tokens) + APIs (connect to WhatsApp/payments)<br><span class="tag t-s">S</span> See API keys in .env · see raw API data in browser<br><span class="tag t-b">B</span> <span class="h">"Connect booking form to WhatsApp so I get notified"</span><br><span class="e">✕ 401/403 (unauthorized) · API key wrong</span></td>
-  <td><span class="tag t-c">C</span> Secrets management — NEVER put API keys in code<br><span class="tag t-s">S</span> Check if any secrets leaked to GitHub<br><span class="tag t-b">B</span> <span class="h">"Add webhook for WhatsApp delivery receipts"</span><br><span class="e">✕ API key visible in client-side code</span></td>
-  <td class="out">Login works · WhatsApp notifications live · secrets are safe</td>
+<td>6</td><td style="text-align:center;color:var(--td)">2h</td>
+<td class="w">"I want customers to log in and I get notified on WhatsApp"</td>
+<td><span class="ph ph-p">4</span> <span class="ph ph-e">5</span></td>
+<td class="cn"><b>7</b> Auth &amp; Authorization<br><b>6</b> API (cont.)</td>
+<td class="ly">Logins +<br>Connections</td>
+<td><span class="tag t-c">C</span> Login page for customers<br><span class="tag t-s">S</span> See auth token in browser storage<br><span class="tag t-b">B</span> <span class="h">"Add a login page and protect the booking form"</span><br><span class="e">✕ Login loop · token expired</span></td>
+<td><span class="tag t-c">C</span> Auth (passwords/tokens) · APIs = connect to WhatsApp/payments<br><span class="tag t-s">S</span> See API keys in .env · raw API data in browser<br><span class="tag t-b">B</span> <span class="h">"Connect booking form to WhatsApp so I get notified"</span><br><span class="e">✕ 401/403 (unauthorized) · API key wrong</span></td>
+<td><span class="tag t-c">C</span> Secrets — NEVER put API keys in code<br><span class="tag t-s">S</span> Check if any secrets leaked to GitHub<br><span class="tag t-b">B</span> <span class="h">"Add webhook for WhatsApp delivery receipts"</span><br><span class="e">✕ API key visible in client-side code</span><br><span class="tk">🔧 Toolkit: audit .gitignore</span></td>
+<td class="ot">Login works · WhatsApp notifications live · secrets are safe</td>
 </tr>
+
+<!-- S7 -->
 <tr>
-  <td class="wk" rowspan="2">W4</td><td>7</td><td style="text-align:center;color:var(--text-dim)">2h</td><td class="us">"I want my site live on the internet, secure, and know who visits"</td><td class="ly">Go Live +<br>Measure</td>
-  <td><span class="tag t-c">C</span> What changes between your computer and the real internet<br><span class="tag t-s">S</span> Visit your live site on your real domain<br><span class="tag t-b">B</span> <span class="h">"Add analytics tracking to every page"</span><br><span class="e">✕ Analytics script not loading</span></td>
-  <td><span class="tag t-c">C</span> Production server config · monitoring<br><span class="tag t-s">S</span> See production logs (what's happening right now)<br><span class="tag t-b">B</span> <span class="h">"Deploy to production with HTTPS and monitor health"</span><br><span class="e">✕ Production error — check logs, rollback</span></td>
-  <td><span class="tag t-c">C</span> Environments (local vs production) · rollback plan<br><span class="tag t-s">S</span> Full .env audit — are all secrets set in production?<br><span class="tag t-b">B</span> <span class="h">"Set up rate limiting and security headers"</span><br><span class="e">✕ Deploy broke something — compare dev vs prod</span></td>
-  <td class="out">Live HTTPS site · analytics tracking real visitors · rollback ready</td>
+<td class="wk" rowspan="2">W4</td>
+<td>7</td><td style="text-align:center;color:var(--td)">2h</td>
+<td class="w">"I want my site live on the internet, secure, and know who visits"</td>
+<td><span class="ph ph-p">4</span> <span class="ph ph-e">5</span></td>
+<td class="cn"><b>11</b> Deployment Envs<br><b>12</b> Monitoring</td>
+<td class="ly">Go Live +<br>Measure</td>
+<td><span class="tag t-c">C</span> What changes between your computer and the real internet<br><span class="tag t-s">S</span> Visit your live site on your real domain<br><span class="tag t-b">B</span> <span class="h">"Add analytics tracking to every page"</span><br><span class="e">✕ Analytics script not loading</span></td>
+<td><span class="tag t-c">C</span> Production server · monitoring<br><span class="tag t-s">S</span> See production logs — what's happening right now<br><span class="tag t-b">B</span> <span class="h">"Deploy to production with HTTPS, monitor health"</span><br><span class="e">✕ Production error — check logs, rollback</span></td>
+<td><span class="tag t-c">C</span> Environments (local vs production) · rollback plan<br><span class="tag t-s">S</span> Full .env audit — all secrets set in prod?<br><span class="tag t-b">B</span> <span class="h">"Set up rate limiting and security headers"</span><br><span class="e">✕ Deploy broke something — compare dev vs prod</span><br><span class="tk">🔧 Toolkit: 5-level diagnostic flow</span></td>
+<td class="ot">Live HTTPS site · analytics tracking real visitors · rollback plan ready</td>
 </tr>
+
+<!-- S8 -->
 <tr>
-  <td>8</td><td style="text-align:center;color:var(--text-dim)">2h</td><td class="us">"I want to build features myself and join a network of owners"</td><td class="ly">You + AI +<br>Community</td>
-  <td><span class="tag t-c">C</span> You can now direct AI to build features<br><span class="tag t-s">S</span> Review your own PromptAudit log — see your growth<br><span class="tag t-b">B</span> <span class="h">SOLO: "Add a new page for [feature]" — mentor watches silently</span><br><span class="e">✕ AI hallucination — catch what AI invented</span></td>
-  <td><span class="tag t-c">C</span> You know when to ask for help<br><span class="tag t-s">S</span> Tour other owners' sites — see what's possible<br><span class="tag t-b">B</span> <span class="h">SOLO: Build backend for your new feature</span><br><span class="e">✕ Solo debug: apply the 5-level checklist</span></td>
-  <td><span class="tag t-c">C</span> You + mentor = long-term partnership<br><span class="tag t-s">S</span> Your commit history = your portfolio<br><span class="tag t-b">B</span> <span class="h">Community showcase · handoff conversation</span><br><span class="e">✕ "What if site goes down?" — you know the answer</span></td>
-  <td class="out">Independent with AI · part of the network · clear escalation path</td>
+<td>8</td><td style="text-align:center;color:var(--td)">2h</td>
+<td class="w">"I want to build features myself and join a network of owners"</td>
+<td><span class="ph ph-e">5</span></td>
+<td class="cn"><b>9</b> Error Handling<br>All concepts<br>in practice</td>
+<td class="ly">You + AI +<br>Community</td>
+<td><span class="tag t-c">C</span> You can now direct AI to build features<br><span class="tag t-s">S</span> Review your PromptAudit log — see your growth<br><span class="tag t-b">B</span> <span class="h">SOLO: "Add a new page for [feature]" — mentor watches silently</span><br><span class="e">✕ AI hallucination — catch what AI invented</span></td>
+<td><span class="tag t-c">C</span> You know when to ask for help<br><span class="tag t-s">S</span> Tour other owners' sites — see what's possible<br><span class="tag t-b">B</span> <span class="h">SOLO: Build backend for your new feature</span><br><span class="e">✕ Solo debug: apply the 5-level checklist</span></td>
+<td><span class="tag t-c">C</span> You + mentor = long-term partnership<br><span class="tag t-s">S</span> Your commit history = your portfolio<br><span class="tag t-b">B</span> <span class="h">Community showcase · handoff conversation</span><br><span class="e">✕ "What if site goes down?" — you know the answer</span><br><span class="com">🤝 Community: network entry · scale: managed IT path</span></td>
+<td class="ot">Solo-capable with AI · part of network · clear escalation path to mentor</td>
 </tr>
+
 </tbody></table></div>
+
+<!-- Summary bar -->
 <div class="sum">
 <span><strong>8 sessions</strong> × 2h = <strong>16 hours</strong> 1-on-1</span>
-<span><strong>Stack:</strong> OpenCode + VS Code + Git + GitHub + Browser DevTools + DB Browser</span>
-<span><strong>Every session:</strong> prompt → build → <strong>read the code</strong> → commit → push</span>
+<span><strong>Stack:</strong> OpenCode + VS Code + Git + GitHub + DevTools + DB Browser</span>
+<span><strong>Every session:</strong> prompt → build → <strong>read code</strong> → commit → push</span>
 </div>
 
-<h2>🎯 The 3 Goals (Why This Exists)</h2>
-<div class="grid-2">
-<div class="card-sm"><strong style="color:var(--accent)">#1 — Community</strong><br>You join a network of business-owner builders. Same vocabulary = same tribe = referrals.</div>
-<div class="card-sm"><strong style="color:var(--accent)">#2 — Common Knowledge</strong><br>You understand the full stack. Every future tech conversation is faster, clearer, cheaper.</div>
-<div class="card-sm" style="grid-column:1/-1"><strong style="color:var(--accent)">#3 — Scale</strong><br>When you grow beyond vibe coding, you already have a trusted partner who knows your architecture. Growth naturally returns to us for managed IT.</div>
+<!-- Goals — always visible, compact -->
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px">
+<div class="gi"><b style="color:var(--accent)">#1 — Community</b><br><span style="font-size:11.5px;color:var(--td)">You join a network of owner-builders. Same vocabulary = same tribe = referrals.</span></div>
+<div class="gi"><b style="color:var(--accent)">#2 — Common Knowledge</b><br><span style="font-size:11.5px;color:var(--td)">You understand the full stack. Every future tech conversation is faster and clearer.</span></div>
+<div class="gi"><b style="color:var(--accent)">#3 — Scale</b><br><span style="font-size:11.5px;color:var(--td)">When you grow past vibe coding, you have a trusted partner who knows your architecture.</span></div>
 </div>
 
-<h2>🗺️ The Full-Stack Map (Your New Vocabulary)</h2>
-<p style="font-size:12.5px;margin-bottom:8px;color:var(--text-dim)">Every layer maps to something in your business. When you write a prompt, mentally trace which layers it touches.</p>
-<div class="card" style="font-size:12.5px;line-height:1.7;font-family:monospace">
-  Internet   →  Domain = address  ·  DNS = phonebook  ·  Hosting = building  ·  HTTPS = lock<br>
-  Frontend   →  HTML = structure  ·  CSS = paint/fonts  ·  JS = buttons/forms that move<br>
-  Backend    →  Server = kitchen  ·  Business Logic = recipes  ·  Auth = who gets in<br>
-  Database   →  Tables = file drawers  ·  Records = papers  ·  Relationships = cross-references<br>
-  Integration →  APIs = talking to WhatsApp, payments, maps<br>
-  Development →  Git = save/undo  ·  GitHub = cloud backup  ·  Local Env = your workshop<br>
-  Deployment →  Build = pack  ·  Hosting = live shop  ·  CI/CD = auto quality checks<br>
-  Security   →  Passwords = keys  ·  Permissions = who enters which room  ·  Secrets = master keys<br>
-  Analytics  →  Visitors = foot traffic  ·  Leads = inquiries  ·  Conversions = sales<br>
-  AI Dev     →  Prompting = describing  ·  Context = background info  ·  Vibe Coding = flow state
-</div>
-
+<!-- Collapsible: reference only -->
 <details>
-<summary>📋 Phase 0 — Before You Start (Onboarding Audit)</summary>
-<div class="card" style="font-size:12.5px">
-<strong>When:</strong> 60-90 min before Week 1. <strong>Purpose:</strong> Every owner is different. This shapes your vertical sleeve, pace, and integrations.
-<table class="tk" style="margin-top:6px">
-<tr><th>Area</th><th>Question</th><th>Outcome</th></tr>
-<tr><td><strong>Business</strong></td><td>What do you sell? Who buys? What must the site achieve?</td><td>Your VMG (Vision/Mission/Goals)</td></tr>
-<tr><td><strong>Vertical</strong></td><td>Lead-gen / e-com / booking / portfolio / community?</td><td>Sleeve selection</td></tr>
-<tr><td><strong>Assets</strong></td><td>Domain? Logo? Colors? Photos? Copy?</td><td>Asset checklist</td></tr>
-<tr><td><strong>Tech comfort</strong></td><td>Used terminal/Git? Built anything? Used AI?</td><td>Pace: beginner / intermediate</td></tr>
-<tr><td><strong>Integrations</strong></td><td>Payments? WhatsApp? Calendar? Maps? CRM?</td><td>Week 3 focus</td></tr>
-<tr><td><strong>KPIs</strong></td><td>What does success look like in 30/60/90 days?</td><td>Analytics targets</td></tr>
-<tr><td><strong>Scale intent</strong></td><td>Grow? Add branches? Hire? Franchise?</td><td>Goal #3 handoff plan</td></tr>
-<tr><td><strong>Prompting</strong></td><td>Used ChatGPT/Claude? For what?</td><td>PromptAudit baseline</td></tr>
-</table>
-<strong>Output:</strong> Your Build Journal — a living doc with your VMG, weekly goals, PromptAudit link, and adjustments.
+<summary>📖 Full-Stack Map Reference</summary>
+<div class="gf" style="font-family:monospace;font-size:12px">
+Internet → Domain=address · DNS=phonebook · Hosting=building · HTTPS=lock<br>
+Frontend → HTML=structure · CSS=paint/fonts · JS=buttons/forms<br>
+Backend → Server=kitchen · Logic=recipes · Auth=who gets in<br>
+Database → Tables=drawers · Records=papers · Relationships=cross-refs<br>
+Integration → APIs=talking to WhatsApp/payments/maps<br>
+Development → Git=save/undo · GitHub=cloud backup · Local=workshop<br>
+Deployment → Build=pack · Hosting=shop · CI/CD=auto checks<br>
+Security → Passwords=keys · Permissions=rooms · Secrets=master keys<br>
+Analytics → Visitors=foot traffic · Leads=inquiries · Conversions=sales<br>
+AI Dev → Prompting=describing · Context=background · Vibe Coding=flow
 </div>
 </details>
 
 <details>
-<summary>🧠 The 12 Concepts That Make You a Better Prompter</summary>
-<div class="grid-4">
+<summary>🧩 The 12 Concepts Reference</summary>
+<div class="g4">
 <div class="gi"><span class="num">1</span><span class="nm">Client-Server</span><span class="w">(W1)</span><span class="why">Know what lives where. "Validate on frontend, submit to backend."</span></div>
-<div class="gi"><span class="num">2</span><span class="nm">HTTP & Request</span><span class="w">(W1)</span><span class="why">URL → DNS → server → response. Debug "why is this blank?"</span></div>
-<div class="gi"><span class="num">3</span><span class="nm">Front vs Back</span><span class="w">(W2/W3)</span><span class="why">Say WHICH side a feature belongs to in your prompts.</span></div>
-<div class="gi"><span class="num">4</span><span class="nm">Data Modeling</span><span class="w">(W3)</span><span class="why">THE key skill. "User has many Orders" → AI builds the right DB.</span></div>
-<div class="gi"><span class="num">5</span><span class="nm">CRUD</span><span class="w">(W3)</span><span class="why">90% of features = Create, Read, Update, Delete. Frame it this way.</span></div>
-<div class="gi"><span class="num">6</span><span class="nm">API (REST)</span><span class="w">(W3)</span><span class="why">"GET /orders returns history" — how frontend talks to backend.</span></div>
-<div class="gi"><span class="num">7</span><span class="nm">Auth</span><span class="w">(W3)</span><span class="why">"Google login" vs "Admin can delete" = different architecture.</span></div>
-<div class="gi"><span class="num">8</span><span class="nm">State</span><span class="w">(W2/W3)</span><span class="why">"Update list after save without refresh" needs state-awareness.</span></div>
-<div class="gi"><span class="num">9</span><span class="nm">Error Handling</span><span class="w">(W1-W4)</span><span class="why">"What if email invalid?" + "What if DB down?" = robust prompts.</span></div>
-<div class="gi"><span class="num">10</span><span class="nm">.env & Secrets</span><span class="w">(W3/W4)</span><span class="why">API keys in .env, not code. Essential security habit.</span></div>
-<div class="gi"><span class="num">11</span><span class="nm">Environments</span><span class="w">(W4)</span><span class="why">Local vs staging vs production. "Don't break my live site."</span></div>
-<div class="gi"><span class="num">12</span><span class="nm">Monitoring</span><span class="w">(W4)</span><span class="why">Logs + metrics + alerts. Know when something's wrong.</span></div>
+<div class="gi"><span class="num">2</span><span class="nm">HTTP Lifecycle</span><span class="w">(W1)</span><span class="why">URL→DNS→server→response. Debug "why is this blank?"</span></div>
+<div class="gi"><span class="num">3</span><span class="nm">Frontend vs Backend</span><span class="w">(W2/W3)</span><span class="why">Specify which side a feature belongs to.</span></div>
+<div class="gi"><span class="num">4</span><span class="nm">Data Modeling</span><span class="w">(W3)</span><span class="why">THE most important. "User has many Orders" → right schema.</span></div>
+<div class="gi"><span class="num">5</span><span class="nm">CRUD</span><span class="w">(W3)</span><span class="why">90% of features = Create, Read, Update, Delete.</span></div>
+<div class="gi"><span class="num">6</span><span class="nm">API (REST)</span><span class="w">(W3)</span><span class="why">"GET /orders" = how frontend talks to backend.</span></div>
+<div class="gi"><span class="num">7</span><span class="nm">Auth &amp; Authz</span><span class="w">(W3)</span><span class="why">"Login with Google" vs "Admin can delete" = different architecture.</span></div>
+<div class="gi"><span class="num">8</span><span class="nm">State Mgmt</span><span class="w">(W2/W3)</span><span class="why">"After saving, update list without refresh."</span></div>
+<div class="gi"><span class="num">9</span><span class="nm">Error Handling</span><span class="w">(W1-W4)</span><span class="why">"What if email invalid?" + "What if DB down?"</span></div>
+<div class="gi"><span class="num">10</span><span class="nm">Env &amp; Secrets</span><span class="w">(W3/W4)</span><span class="why">API keys in .env, not code. Essential security.</span></div>
+<div class="gi"><span class="num">11</span><span class="nm">Deployment Envs</span><span class="w">(W4)</span><span class="why">Local vs staging vs prod. "Don't break my live site."</span></div>
+<div class="gi"><span class="num">12</span><span class="nm">Monitoring</span><span class="w">(W4)</span><span class="why">Logs, metrics, alerts. Know when something's wrong.</span></div>
 </div>
 </details>
 
 <details>
-<summary>🔍 The 5-Level Troubleshooting Checklist</summary>
-<p style="font-size:12px;color:var(--text-dim);margin-bottom:6px">When something breaks, trace it from screen to database. By the time you call for help, say: <em>"Booking form returns 500. Server log says WhatsApp API returned 401. I checked .env, the key looks right."</em></p>
-<div class="diag">
-<div class="di"><div class="di-t">Level 1: What happened?</div><div class="di-s">Ask the user/report. What exactly? Error message? Blank page?</div></div>
-<div class="di"><div class="di-t">Level 2: Browser tools</div><div class="di-s">Open browser developer tools. Any red errors? Network tab: what status code? 404/500/401?</div></div>
-<div class="di"><div class="di-t">Level 3: Server logs</div><div class="di-s">Check the server console/log. Find the failed request. Read the error — which file:line? What was passed?</div></div>
-<div class="di"><div class="di-t">Level 4: Database</div><div class="di-s">Open your DB. Does the table exist? Right columns? Try a simple query to see if data is there.</div></div>
-<div class="di"><div class="di-t">Level 5: External service</div><div class="di-s">Is WhatsApp/payment working? API key valid? Not expired? Rate limited?</div></div>
+<summary>🔍 5-Level Troubleshooting Checklist</summary>
+<div style="display:flex;flex-direction:column;gap:5px">
+<div class="gi" style="border-left:3px solid var(--accent)"><b>L1 — User says:</b> "The booking form isn't working"</div>
+<div class="gi" style="border-left:3px solid var(--accent)"><b>L2 — Browser Console:</b> Open DevTools → any errors? Network tab → status codes?</div>
+<div class="gi" style="border-left:3px solid var(--accent)"><b>L3 — Server Logs:</b> Check logs → find failed request → read stack trace</div>
+<div class="gi" style="border-left:3px solid var(--accent)"><b>L4 — Database:</b> Open DB browser → does the table exist? Is data there?</div>
+<div class="gi" style="border-left:3px solid var(--accent)"><b>L5 — External API:</b> Is WhatsApp/payment working? API key valid? Rate limited?</div>
 </div>
 </details>
 
 <details>
-<summary>🛠️ Your Toolkit — What You Can Do vs What You Can Read</summary>
-<div class="card" style="font-size:12px">
-<div style="font-weight:600;color:var(--accent2);margin-bottom:4px">Things you do yourself:</div>
-<ul style="margin-left:16px;margin-bottom:8px">
-  <li>Open VS Code, edit files, run terminal commands</li>
-  <li>Use Git: add, commit, push, check log</li>
-  <li>Run OpenCode, type prompts, see it build</li>
-  <li>Toggle PromptAudit, review your own log</li>
-  <li>Deploy your site, check if it's live</li>
-  <li>View analytics — visitors, leads, conversions</li>
-</ul>
-<div style="font-weight:600;color:var(--accent2);margin-bottom:4px">Things you inspect and understand:</div>
-<ul style="margin-left:16px">
-  <li>Browser DevTools: inspect any page, see network requests, read console errors</li>
-  <li>Server logs: read error messages, identify file and line number</li>
-  <li>Database browser: see tables and rows, run a basic query</li>
-  <li>Git log: read commit history, understand what changed</li>
-  <li>.env file: audit secrets, check nothing is missing</li>
-  <li>Error reports (if configured): see what broke and when</li>
-</ul>
+<summary>📋 Vertical Sleeve Template (mentor use)</summary>
+<div class="gi" style="font-family:monospace;font-size:11px;line-height:1.7">
+<strong>Owner:</strong> ___________  <strong>Business:</strong> ___________  <strong>Vertical:</strong> ___________<br>
+<strong>W2 Build:</strong> ___________  <strong>W3 Data Model:</strong> ___________  <strong>Integration:</strong> ___________<br>
+<strong>KPIs:</strong> ___________  <strong>Scale trigger:</strong> ___________  <strong>Handoff pkg:</strong> ___________
 </div>
 </details>
 
 <details>
-<summary>🤝 Community + Scale Handoff (Goals #1 & #3)</summary>
-<div class="card" style="font-size:12.5px">
-<strong style="color:var(--accent)">Community (Goal #1)</strong><br>
-Graduation showcase → private group (Telegram/Discord) with your profile + site → monthly showcases → vertical channels → referral bounties toward managed IT. Networking through shared vocabulary.<br><br>
-<strong style="color:var(--accent)">Scale Handoff (Goal #3)</strong><br>
-When your business outgrows vibe coding, we escalate:
-<ol style="margin-left:16px;margin-top:4px">
-  <li><strong>Phase 1:</strong> Full booking automation → integrated calendar → payments → $X/mo</li>
-  <li><strong>Phase 2:</strong> Customer portal → automated reminders → review system → $Y/mo</li>
-  <li><strong>Phase 3:</strong> Multi-staff management → custom analytics → $Z/mo</li>
-</ol>
-Because I already know your architecture (from these 4 weeks), I start immediately — no discovery phase, no "what does this code do?" Six weeks compressed to one.
+<summary>📅 Weekly Retrospective Format</summary>
+<div class="gi" style="font-size:11.5px">
+<strong>Owner (5 min):</strong> Rate 1-5 on concepts, tools, prompts, confidence.<br>
+<strong>Mentor (10 min):</strong> Review 3 random prompts in PromptAudit. Review git log. Identify 1 strength + 1 to improve.<br>
+<strong>Adjust (10 min):</strong> Pacing right? Vertical sleeve working? Blockers?<br>
+<strong>Preview (5 min):</strong> Next week's topics. What to install/pre-read.
 </div>
 </details>
 
-<details>
-<summary>📊 Weekly Retrospective Format (30 min)</summary>
-<div class="card" style="font-size:12px">
-<strong>Owner self-assessment (5 min):</strong> Rate 1-5: understand concepts? Can explain to someone else? Prompts improving? Confident for next week?<br><br>
-<strong>Mentor review (10 min):</strong> PromptAudit — review 3 random prompts. Git log — descriptive commits? Identify 1 to improve + 1 you excelled at.<br><br>
-<strong>Adjustments (10 min):</strong> Pacing right? Vertical sleeve working? Any blockers?<br><br>
-<strong>Preview (5 min):</strong> What's next week. Read/watch before session. Tools to install.
 </div>
-</details>
-
-<details>
-<summary>📄 Vertical Sleeve Template (for mentor use)</summary>
-<div class="tpl">
-## [Vertical Name] Sleeve
-
-### Owner Profile
-
-- Business type:
-
-- Comfort level:
-
-- Budget range:
-
-### Week 2 — Frontend
-
-- What they build:
-
-- Components:
-
-- Example prompt:
-
-### Week 3 — Data + Integration
-
-- Entities/relationships:
-
-- Primary integration:
-
-- API setup notes:
-
-### Week 4 — KPIs & Handoff
-
-- Primary metric:
-
-- Scale trigger:
-
-- Suggested package:
-
-### Notes
-
-- Unique considerations:
-
-- Common pitfalls:
-
-- Good reference sites:
-</div>
-</details>
-
-</div></body></html>
+</body>
+</html>
