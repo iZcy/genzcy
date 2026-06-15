@@ -8,39 +8,35 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 
-\renewcommand{\arraystretch}{1.1}
-\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1}
+\setlength{\tabcolsep}{3.5pt}
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
-\setlist[itemize]{nosep,leftmargin=*,before={\vspace{-2pt}},after={\vspace{-2pt}},itemsep=0pt}
+\setlist[itemize]{nosep,leftmargin=*,before={\vspace{-3pt}},after={\vspace{-3pt}},itemsep=0pt}
 
 \begin{document}
 
 % Title
 {\Large\bfseries Private Vibe Coding with Fundamentals Mentorship\par}
-\vspace{4pt}
+\vspace{2pt}
 
 \noindent{\footnotesize
 \begin{tabular}{@{}ll}
-\textbf{Durasi:} & 4 minggu\\
-\textbf{Sesi:} & 8 sesi $\times$ 2 jam\\
-\textbf{Bentuk:} & 1-on-1 mentorship\\
+\textbf{Durasi:} & 4 minggu $\mid$ 8 sesi $\times$ 2 jam $\mid$ 1-on-1 mentorship\\
 \end{tabular}
 }
 
-\vspace{4pt}
-\noindent{\footnotesize\bfseries Mentor:} {\footnotesize Yitzhak Edmund Tio Manalu -- CEO of ArachnoVa}\\
-{\footnotesize\bfseries Sites:} {\footnotesize \url{https://www.arachnova.id} $\mid$ \url{https://www.instagram.com/arachnova.id}}
+\vspace{2pt}
+\noindent{\footnotesize\bfseries Mentor:} {\footnotesize Yitzhak Edmund Tio Manalu -- CEO of ArachnoVa \hfill \url{https://www.arachnova.id} $\mid$ \url{https://www.instagram.com/arachnova.id}}
 
-\vspace{3pt}
-\noindent{\footnotesize\bfseries Stack:} {\footnotesize Vite + TailwindCSS (FE) $\mid$ Express JS (BE) $\mid$ MongoDB (DB) $\mid$ Resend (Email) $\mid$ JWT (Auth) $\mid$ Midtrans (Payments)}\\
-{\footnotesize\bfseries Tarif:} {\footnotesize\bfseries Rp100.000/jam} {\footnotesize ($\times$ 16 jam = Rp1.600.000 total)}
+\vspace{2pt}
+\noindent{\footnotesize\bfseries Stack:} {\footnotesize Vite + TailwindCSS (FE) $\mid$ Express JS (BE) $\mid$ MongoDB (DB) $\mid$ Resend (Email) $\mid$ JWT (Auth) $\mid$ Midtrans (Payments) \hfill \textbf{Rp100.000/jam} ($\times$ 16 = Rp1.600.000)}
 
 \vspace{6pt}
 
 % Session table
 \noindent
 {\footnotesize
-\begin{tabularx}{\textwidth}{c P{2.3cm} >{\raggedright\arraybackslash}X P{4.2cm}}
+\begin{tabularx}{\textwidth}{c P{2cm} >{\raggedright\arraybackslash}X P{3.8cm}}
 \toprule
 \textbf{Sesi} & \textbf{Judul} & \textbf{Points} & \textbf{Output}\\
 \midrule
@@ -52,62 +48,75 @@
 \item Vanilla Web Development: HTML, CSS, JavaScript, SQLite
 \item Deploy WebApp pertama ke Netlify melalui GitHub
 \end{itemize}
-& \textbf{Web vanilla pertama berhasil dideploy ke Netlify.}\\
+& \textbf{Web vanilla pertama berhasil di-deploy ke Netlify.}\\
 
 2 & The Prompt Architect
 & \begin{itemize}[nosep,leftmargin=*]
 \item Perkembangan AI: dari expert systems hingga LLM
 \item Context Management: dokumen markdown, MCP, dan skill
 \item Software Development Lifcycle (SDLC) dan Blackbox Development
-\item Deploy WebApp yang berangkat dari konteks markdown
+\item Deploy WebApp berbasis Context Management ke Netlify melalui GitHub
+\item Code reading dan cleanup: memeriksa dan membersihkan hasil generated code
 \end{itemize}
-& \textbf{Web dari context-sharing berhasil dideploy ke Netlify.}\\
+& \textbf{Web ditingkatkan dengan bantuan context management.}\\
 
 3 & Do Not Reinvent the Wheel
 & \begin{itemize}[nosep,leftmargin=*]
-\item Rasionalisasi framework dan library dalam web development
+\item Penjelasan framework dan library dalam web development
 \item Perbedaan bermacam bahasa pemrograman dan kelebihan masing-masing
 \item Penerapan Vite, TailwindCSS, Express, dan MongoDB
-\item Deployment aplikasi framework ke server produksi
+\item Mobile responsiveness dan .env: konfigurasi lintas platform
+\item Cara kerja deployment di Infrastructure as a Service (IaaS) dan Platform as a Service (PaaS)
+\item Deployment aplikasi framework ke lebih dari satu platform: Netlify, Render, MongoDB Atlas
+\item DNS dan custom domain: cara kerja DNS, pembelian domain, pengaturan SSL dan pengaturan custom domain di platform hosting
 \end{itemize}
-& \textbf{Web berbasis framework berhasil dideploy ke Netlify, Render, MongoDB Atlas.}\\
+& \textbf{Web berbasis framework berhasil di-deploy ke Netlify, Render, MongoDB Atlas.}\\
 
 4 & The Truth Is in the Logs
 & \begin{itemize}[nosep,leftmargin=*]
-\item Logging frontend: memantau aktivitas pengguna dari browser
-\item Logging backend: mencatat setiap permintaan ke server
-\item Logging server: merekam error dan akses sistem
-\item Simulasi pengunjung dan analisis data real-time
-\item Log viewer pada halaman admin
+\item Logging frontend: memantau aktivitas pengguna dan error client-side
+\item Logging backend: mencatat setiap permintaan ke server dan error server-side
+\item Logging network: memantau traffic user ke server
+\item Integrasi Google Analytics: memantau user behaviour dan website performance
+\item Analisis log: identifikasi error, optimasi performa, dan UX pattern
+\item Improvement berbasis data: iterasi development fitur berdasarkan insight dari log
 \end{itemize}
-& \textbf{Log viewer dan panel analitik aktif di halaman admin.}\\
+& \textbf{Web dikembangkan dengan analisis log.}\\
 
 5 & Show Me the Money
 & \begin{itemize}[nosep,leftmargin=*]
-\item Fitur pemesanan: pilih produk dan scheduling
-\item Integrasi pembayaran Midtrans Sandbox
-\item Konfirmasi pembayaran via webhook dan notifikasi email
-\item Conversion rate tracking: dari klik hingga pembayaran sukses
+\item Perancangan data dan alur fitur pemesanan: pilih produk dan scheduling
+\item Basic CRUD dalam website bisnis, apa saja di frontend dan backend
+\item Konsep Network dan API: komunikasi antara frontend dan backend
+\item Integrasi pembayaran via Midtrans Sandbox, konfirmasi email via Resend
+\item State management: database, cache, local storage, dan hardcoding
+\item API logging: cek conversion dari click to leads
 \end{itemize}
-& \textbf{Sistem booking dan pembayaran terintegrasi dengan Midtrans.}\\
+& \textbf{Web ditambahkan interaksi dinamis melalui custom API dan 3rd party API.}\\
 
 6 & Who Goes There?
 & \begin{itemize}[nosep,leftmargin=*]
-\item Sistem Auth: registrasi, login, dan logout
-\item Dashboard admin vs dashboard user
-\item Role Based Access Control: bedakan tampilan admin dan user
+\item Konsep Role Based Access Control (RBAC) untuk membedakan akses dan tampilan antara admin dan user
+\item Konsep Middleware: fungsi yang berjalan di antara request dan response untuk mengelola request sebelum mencapai endpoint
+\item Implementasi Sistem Auth: registrasi, login, dan logout
+\item Konsep Multitenancy: satu aplikasi untuk banyak pengguna dengan data terpisah
+\item Implementasi Multitenancy: setiap pengguna memiliki data dan tampilan yang berbeda berdasarkan role dan preferensi
+\item Referal dan Affiliate: sistem referral, serta program affiliate untuk mitra
 \end{itemize}
-& \textbf{Panel admin dengan akses multi-level berfungsi.}\\
+& \textbf{Web memiliki sistem auth, RBAC, dan multitenancy.}\\
 
 7 & Ready for the Wild
 & \begin{itemize}[nosep,leftmargin=*]
-\item Optimalisasi judul dan deskripsi yang tampil di hasil pencarian
-\item Pengaturan link media sosial agar tampil dengan gambar dan deskripsi
-\item Web Performance Optimization: kompresi gambar, optimasi loading, lokasi server
-\item Keamanan dasar: pembatasan request, validasi input
-\item \textbf{Verifikasi:} pratinjau hasil pencarian via tools, uji kecepatan PageSpeed, periksa meta tag di sumber halaman
+\item Optimalisasi SEO: bagian apa saja yang tampil di hasil pencarian
+\item Meta tags: Pengaturan link media sosial saat di-share
+\item Google Search Console: memantau indexing dan performa pencarian
+\item Cookie consent dan kebijakan privasi: kepatuhan terhadap perlindungan data
+\item Web Performance Optimization: image optimization, lazy loading, caching, CDN, dan lighthouse audit
+\item Separation of environments: perbedaan konfigurasi development, staging, dan production
+\item Keamanan dasar: rate limitter, input validation, security logging, dan backup data
+\item Rollback plan: pemulihan sistem saat terjadi serangan atau kegagalan deployment
 \end{itemize}
-& \textbf{Situs siap produksi: SEO, CDN, dan keamanan dasar.}\\
+& \textbf{Web di-optimalkan untuk performa, keamanan, dan kepatuhan.}\\
 
 8 & No More Training Wheels
 & \begin{itemize}[nosep,leftmargin=*]
@@ -116,9 +125,10 @@
 \item Perancangan testimoni dari database
 \item Perancangan galeri dengan fitur upload
 \item Perancangan banner promo atau panel pengumuman
-\item Perancangan link media sosial yang ditampilkan secara langsung
+\item Google Maps embed: menampilkan lokasi bisnis
+\item Hasil akhir: apa yang bisa dilakukan vibe coder basic vs vibe coder programmer
 \end{itemize}
-& \textbf{Fitur tambahan berhasil dideploy secara mandiri.}\\
+& \textbf{Fitur tambahan berhasil di-deploy secara mandiri.}\\
 \bottomrule
 \end{tabularx}
 }
