@@ -29,7 +29,7 @@
 
 \vspace{4pt}
 \noindent{\footnotesize\bfseries Mentor:} {\footnotesize Yitzhak Edmund Tio Manalu -- CEO of ArachnoVa}\\
-{\footnotesize\bfseries Web:} {\footnotesize \url{https://www.arachnova.id} $\mid$ \url{instagram.com/arachnova.id}}
+{\footnotesize\bfseries Web:} {\footnotesize \url{https://www.arachnova.id} $\mid$ \url{https://www.instagram.com/arachnova.id}}
 
 \vspace{3pt}
 \noindent{\footnotesize\bfseries Stack:} {\footnotesize Vite + TailwindCSS (FE) $\mid$ Express JS (BE) $\mid$ MongoDB (DB) $\mid$ Resend (Email) $\mid$ JWT (Auth) $\mid$ Midtrans (Payments)}\\
@@ -48,7 +48,7 @@
 & \begin{itemize}[nosep,leftmargin=*]
 \item Perbandingan Campus vs Proyek vs Vibe Code
 \item Sejarah perkembangan software development
-\item OpenCode + PromptAudit setup
+\item OpenCode + tooling setup
 \item Zero-level vanilla stack (HTML/CSS/JS, JS backend, SQLite)
 \item Deploy ke Netlify via GitHub
 \end{itemize}
@@ -76,11 +76,11 @@
 
 4 & The Truth Is in the Logs
 & \begin{itemize}[nosep,leftmargin=*]
-\item pino structured logging
-\item Break case: buat bug sengaja, trace dan fix
-\item Analytics: Plausible/GA
-\item Business case: simulasi visitor
-\item Log viewer + analytics dashboard
+\item pino structured logging (setiap request tercatat)
+\item Break case: matikan koneksi database, trace error dari logs
+\item Plausible analytics — tau berapa pengunjung, dari mana, klik apa
+\item Business case: simulasikan pengunjung, lihat data real-time
+\item Log viewer + Plausible dashboard di admin
 \end{itemize}
 & \textbf{Log viewer + analytics dashboard live.}\\
 
@@ -100,25 +100,25 @@
 \item Admin dashboard + role-based access
 \item Email notifications on status change
 \item Cookie consent + privacy compliance
-\item Break case: role leak
+\item Break case: token misconfiguration — user login gagal, trace dan fix
 \end{itemize}
 & \textbf{Admin dashboard dengan login multi-role live.}\\
 
 7 & Ready for the Wild
 & \begin{itemize}[nosep,leftmargin=*]
 \item SEO meta tags + Open Graph + sitemap
+\item Structured data (JSON-LD) agar dipahami Google \& AI Agents
 \item Image optimization + CDN + Lighthouse audit
 \item Rate limiting + input validation + CORS
-\item Cookie consent banner + privacy page
 \item Break case: mixed content warning
+\item \textbf{Bukti SEO bekerja:} Google Rich Results Test, tanya ChatGPT/Claude tentang bisnis Anda, cek hasilnya akurat
 \end{itemize}
 & \textbf{Site production-ready: HTTPS + SEO + CDN + privacy compliance.}\\
 
 8 & No More Training Wheels
 & \begin{itemize}[nosep,leftmargin=*]
 \item Solo free build (mentor nonton diam)
-\item PromptAudit graduation review
-\item Community showcase
+\item Community showcase — presentasi ke network owner
 \item Scale handoff conversation
 \end{itemize}
 & \textbf{Fitur baru dibangun \& dideploy sendiri.}\\
@@ -132,6 +132,6 @@
 \noindent{\footnotesize\bfseries Total: 8 sesi $\times$ 2 jam = 16 jam $\mid$ Rp1.600.000}
 
 \vspace{2pt}
-\noindent{\footnotesize Setiap sesi: Konsep $\rightarrow$ BUILD via prompt $\rightarrow$ BACA kode $\rightarrow$ Error tracing $\rightarrow$ Commit \& Push. PromptAudit aktif dari Hari 1.}
+\noindent{\footnotesize Setiap sesi: Konsep $\rightarrow$ BUILD via prompt $\rightarrow$ BACA kode $\rightarrow$ Error tracing $\rightarrow$ Commit \& Push.}
 
 \end{document}
