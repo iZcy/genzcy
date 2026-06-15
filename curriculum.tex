@@ -77,7 +77,6 @@
 4 & The Truth Is in the Logs
 & \begin{itemize}[nosep,leftmargin=*]
 \item pino structured logging (setiap request tercatat)
-\item Break case: matikan koneksi database, trace error dari logs
 \item Plausible analytics — tau berapa pengunjung, dari mana, klik apa
 \item Business case: simulasikan pengunjung, lihat data real-time
 \item Log viewer + Plausible dashboard di admin
@@ -89,7 +88,6 @@
 \item Booking form + date picker + service selector
 \item Payment gateway: Midtrans (test mode)
 \item Webhook + email receipt via Resend
-\item Break case: webhook failure
 \item Conversion event tracking
 \end{itemize}
 & \textbf{Booking + payment flow live (Midtrans test mode).}\\
@@ -100,7 +98,6 @@
 \item Admin dashboard + role-based access
 \item Email notifications on status change
 \item Cookie consent + privacy compliance
-\item Break case: token misconfiguration — user login gagal, trace dan fix
 \end{itemize}
 & \textbf{Admin dashboard dengan login multi-role live.}\\
 
@@ -110,7 +107,6 @@
 \item Structured data (JSON-LD) agar dipahami Google \& AI Agents
 \item Image optimization + CDN + Lighthouse audit
 \item Rate limiting + input validation + CORS
-\item Break case: mixed content warning
 \item \textbf{Bukti SEO bekerja:} Google Rich Results Test, tanya ChatGPT/Claude tentang bisnis Anda, cek hasilnya akurat
 \end{itemize}
 & \textbf{Site production-ready: HTTPS + SEO + CDN + privacy compliance.}\\
@@ -132,6 +128,6 @@
 \noindent{\footnotesize\bfseries Total: 8 sesi $\times$ 2 jam = 16 jam $\mid$ Rp1.600.000}
 
 \vspace{2pt}
-\noindent{\footnotesize Setiap sesi: Konsep $\rightarrow$ BUILD via prompt $\rightarrow$ BACA kode $\rightarrow$ Error tracing $\rightarrow$ Commit \& Push.}
+\noindent{\footnotesize Setiap sesi: Konsep $\rightarrow$ BUILD via prompt $\rightarrow$ BACA kode $\rightarrow$ Commit \& Push.}
 
 \end{document}
