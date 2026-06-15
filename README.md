@@ -80,16 +80,18 @@ OpenCode will read the `AGENTS.md` instructions and automatically commit + push 
 
 ---
 
-## What You'll Learn (4 Weeks)
+## The 8 Sessions
 
-| Week | Topic | You'll be able to... |
+| Ses | Title | What you'll do |
 |---|---|---|
-| 1 | How the web works + dev environment | Explain the full stack, use git, run a local server |
-| 2 | Frontend | See any website's structure in DevTools, build your own UI |
-| 3 | Backend + Database + APIs | Model your business data, connect real integrations |
-| 4 | Deploy + Security + Analytics + AI | Ship live, monitor visitors, continue building with AI |
-
-Full curriculum at `CURRICULUM.md`.
+| **1** | **Introduction to Vibe Coding Responsibly** | Compare dev paths. Set up OpenCode + PromptAudit. Build + deploy vanilla full-stack app to Netlify. |
+| **2** | **The Prompt Architect** | Master context (MCPs, skills). SDLC + blackbox dev. Clean AI debris. Fork & deploy 2 projects. |
+| **3** | **Do Not Reinvent The Wheels** | Why frameworks. Vite+Tailwind+Express+MongoDB. Complete beginner track. Deploy framework app. |
+| **4** | **Trust, But Verify** | pino logging. Analytics. Break case + business case. Log viewer + analytics dashboard. |
+| **5** | **From Click to Cash** | Booking + payment end-to-end. Webhook + email receipt. Debug webhook failure. |
+| **6** | **Know Thy Customer** | JWT auth + dashboard + roles. Email notifications. Debug role leak. |
+| **7** | **Ready, Set, Ship** | SEO + performance + security + compliance. Debug mixed content. |
+| **8** | **Full Circle** | Solo build. PromptAudit review. Community showcase. Handoff. |
 
 ---
 

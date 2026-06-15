@@ -2,145 +2,174 @@
 
 ---
 
-## Session 1 — "My First Page" (Full Stack in One Page)
+## Session 1 — "Introduction to Vibe Coding Responsibly"
 
-**Goal:** Owner builds first page + understands what FE/BE/DO are by DOING them.
+**Goal:** Owner understands the landscape, the history, and ships their first (vanilla) site.
 
-| Key points to present | Owner should walk away knowing |
+| Phase | Key points to present |
 |---|---|
-| **How development changed:** Old way = write every line by hand, deterministic, months to build. New way (vibe coding) = describe what you want in plain language, AI generates the code, hours to build. | AI is **probabilistic** — it predicts, doesn't "think." Same prompt can give different results. You MUST test everything and read the generated code. You don't learn to code; you learn to **architect and direct**. |
-| Frontend = what users see (HTML/CSS) | They built HTML, saw it render in browser |
-| Backend = server that delivers pages (Express) | They started a server, saw it respond to requests |
-| DevOps = git + deploy + monitor (Git + GitHub) | They ran `git init`, committed, pushed to GitHub |
-| PromptAudit protocol activated | Every prompt gets a before/after commit pair |
-| Production tool: **Vite** scaffolds the project | They'll never write raw HTML files |
+| **Compare paths** | Campus (+: research-ready, -: bad innovation, no skill). Practicals (+: superpower of creating everything, -: business-ignorant, best-case focus). Vibe Coder (+: fast-paced, innovators, closest to businesses, -: no fundamental, overconfident). Honest limitations of vibe coding. |
+| **Dev history → Vibe Coding** | From punch cards → typed code → frameworks → AI. OpenCode + PromptAudit integration. How every prompt is logged. Explore OpenCode features. |
+| **Zero-level stack** | Vanilla HTML/CSS/JS (no frameworks). Vanilla JS backend (no Express). SQLite (no MongoDB). Learn fundamentals BEFORE abstractions. |
+| **Deploy** | Push to GitHub → Netlify auto-deploys. Manual connect: GitHub repo → Netlify. See it live. |
 
-**The definition moment:** Owner sees their page in browser → "I made that."
+**Key outcomes:**
+- Understands why this program exists (your honest take on all 3 paths)
+- Sees OpenCode + PromptAudit working
+- Ships a vanilla full-stack app to Netlify
+- Knows the zero-level fundamentals before frameworks
 
 ---
 
-## Session 2 — "Brand + Contact"
+## Session 2 — "The Prompt Architect"
 
-**Goal:** Site looks like their business. Customers can reach them.
+**Goal:** Owner thinks like an architect. Context, SDLC, clean code, multi-project deployment.
 
-| Key points to present | Owner should walk away knowing |
+| Phase | Key points to present |
 |---|---|
-| CSS = brand identity (colors, fonts, layout) | Site now has their logo, brand colors, looks professional |
-| Mobile-first = most visitors are on phones | Layout works on both phone and desktop |
-| Form data goes to the server (Express POST) | They see form submission hit terminal + receive email |
-| Production tool: **Resend** sends the email | One API key, no SMTP config |
-| Branches = safe experiments (`git branch`) | They branched, made changes, merged back |
-| `.gitignore` protects secrets | API keys don't go to GitHub |
+| **AI history** | Expert systems (rules-based) → Statistical ML → LLMs (probabilistic). Why understanding this matters for prompting. |
+| **Context management** | Markdowns for instructions. MCPs for tool access. Skills/Agents for specialized modes. Context window limits. |
+| **SDLC + Blackbox Dev** | Liken to ML training loop: prompt (input) → test (evaluate) → error (loss) → adjust (retrain). Error-driven development + Test-driven development. |
+| **Clean code, clean repo** | AI generates debris (duplicate files, unused imports, dead code). Teach cleanup discipline. Dedup patterns. |
+| **Fork → 2 projects** | Fork the repo. Maintain 2 projects from one context. Deploy both via push MCP → Netlify auto-updates. |
 
-**The click moment:** Owner submits form → gets email → "It actually works."
+**Key outcomes:**
+- Understands why LLMs work the way they do
+- Manages context windows effectively (MCPs, skills)
+- Applies SDLC via error-driven + test-driven loop
+- Cleans up AI debris
+- Runs 2 deployed projects from one codebase fork
 
 ---
 
-## Session 3 — "Content + SEO"
+## Session 3 — "Do Not Reinvent The Wheels"
 
-**Goal:** Google can find and understand the site.
+**Goal:** Owner understands why frameworks exist, picks a stack, and ships a framework-based app.
 
-| Key points to present | Owner should walk away knowing |
+| Phase | Key points to present |
 |---|---|
-| SEO = how Google discovers your site | Meta tags, Open Graph, sitemap.xml |
-| Google Search Console = monitor your presence | Submitted sitemap, verified ownership |
-| Database = structured storage (MongoDB) | Collections = folders, documents = files |
-| Production tool: **MongoDB + Mongoose** | Connected to MongoDB, created Service model |
-| FAQ accordion = trust signal | Interactive content that answers customer questions |
+| **Why frameworks?** | History of web dev: vanilla → jQuery → React/Vue. Tradeoffs: speed vs structure, flexibility vs convention. Why so many? Different problems need different tools. |
+| **Our stack** | Vite + TailwindCSS (FE). Express JS (BE). MongoDB (DB). Why these: ecosystem, simplicity, production-ready. |
+| **Complete beginner track** | Model data (Mongoose). CRUD API (Express routes). Dynamic UI (Vite + Tailwind). Connect FE to BE. |
+| **Deploy framework app** | Build + deploy second app with the full stack. Compare to Session 1's vanilla version. |
 
-**The discovery moment:** Owner sees their database with real data → "My business has a digital filing cabinet."
+**Key outcomes:**
+- Can explain why frameworks exist (not just "because everyone uses them")
+- Ships a Vite+Tailwind+Express+MongoDB app
+- Understands the difference from vanilla (Session 1)
+- Can describe their stack choices to others
 
 ---
 
-## Session 4 — "Live Data"
+## Session 4 — "Trust, But Verify"
 
-**Goal:** Site content comes from the database, not hardcoded.
+**Goal:** Owner implements logging + analytics. Can trace errors AND business events.
 
-| Key points to present | Owner should walk away knowing |
+| Phase | Key points to present |
 |---|---|
-| Dynamic vs static content | Services page reads from DB, updates automatically |
-| CRUD = Create, Read, Update, Delete | Admin page: add/edit/delete services |
-| API = waiter between frontend and database | They see raw JSON responses in browser |
-| Password protection = basic security | Admin area locked, security mindset begins |
+| **Structured logging** | Replace console.log with pino. Every request, DB query, error is JSON. Log levels: info, warn, error. |
+| **Break case** | Deliberately introduce a bug (missing API key, wrong collection name). Owner traces it via logs. Fixes it. |
+| **Analytics** | Install Plausible/GA. Track: page views, form submissions, bookings, errors. |
+| **Business case** | Simulate a visitor flow (Playwright/browser MCP). Watch analytics capture it in real-time. |
+| **Dashboard** | Build a log viewer + analytics summary in admin area. Dev logs + business data in one place. |
 
-**The aha moment:** Owner edits a service in admin → changes appear instantly on live page → "I just updated my site without touching code."
+**Key outcomes:**
+- Reads pino logs to debug production
+- Sets up analytics and reads the dashboard
+- Can answer: "what happened?" (logs) + "what are customers doing?" (analytics)
+- Has a traceability system for future sessions
 
 ---
 
-## Session 5 — "Bookings + Maps + Payments"
+## Session 5 — "From Click to Cash"
 
-**Goal:** Customers can book, pay, and find the business location.
+**Goal:** Booking + payment flow end-to-end. Revenue goes through the site.
 
-| Key points to present | Owner should walk away knowing |
+| Phase | Key points to present |
 |---|---|
-| Booking form = date picker + time slot + service | Customer selects service, date, time, submits |
-| Payment gateway = Midtrans/Xendit/Stripe | Test mode transaction flows end-to-end |
-| Webhooks = payment sends confirmation back | Server receives webhook, updates booking status |
-| Google Maps embed | Location shown on site, click for directions |
-| Never log card details | Payment security awareness |
+| **Booking flow** | Form (service + date + time + customer info) → availability check → confirmation. |
+| **Payment** | Midtrans/Stripe/Xendit integration. Test mode. Never handle card data directly. |
+| **Webhook** | Payment sends confirmation back to your server. Booking status updates. Email receipt via Resend. |
+| **Break case** | Webhook not received → booking unpaid but created. Owner traces via logs, fixes webhook handler. |
+| **Analytics event** | Track "booking_completed" as a conversion event. |
 
-**The thrill moment:** Owner submits a test booking with payment → sees it in admin → gets webhook → "This is a real business tool."
+**Key outcomes:**
+- Booking + payment works end-to-end in test mode
+- Can debug webhook failures via logs
+- Understands they never store card data
+- Sees conversion event in analytics
 
 ---
 
-## Session 6 — "Logins + Dashboard + Privacy"
+## Session 6 — "Know Thy Customer"
 
-**Goal:** Owner controls access. Customers have accounts. Privacy compliant.
+**Goal:** Customer accounts, admin dashboard, role-based access.
 
-| Key points to present | Owner should walk away knowing |
+| Phase | Key points to present |
 |---|---|
-| Auth = who can do what | Login page, JWT token, role-based access |
-| Dashboard = manage bookings + customers | Admin sees all, customer sees only theirs |
-| Cookie consent = legal requirement | Banner appears, user choices respected |
-| Secrets audit = full review | Every API key checked, rotated, .env verified |
-| Production tool: **JWT** for auth tokens | Stateless, secure, industry standard |
+| **Auth** | JWT tokens. Registration + login. Password hashing. Token stored in browser. |
+| **Admin dashboard** | View all bookings, customers, services. Edit/delete. Status management. |
+| **Roles** | Admin = everything. Customer = only their own bookings. Protected routes. |
+| **Notifications** | Email (Resend) on booking status change. |
+| **Break case** | Role leak — customer sees another customer's booking. Owner traces via auth logs, fixes role middleware. |
+| **Analytics event** | Track "user_login", "booking_status_change". |
 
-**The control moment:** Owner logs in → sees dashboard with real data → "I can run my business from here."
+**Key outcomes:**
+- JWT auth working with roles
+- Admin dashboard with real management capabilities
+- Can debug auth errors (401/403) via logs
+- Understands role-based access control
 
 ---
 
-## Session 7 — "Deploy + Analytics + Performance"
+## Session 7 — "Ready, Set, Ship"
 
-**Goal:** Site is live, secure, fast, and measurable.
+**Goal:** SEO, performance, security, compliance. Site is production-ready.
 
-| Key points to present | Owner should walk away knowing |
+| Phase | Key points to present |
 |---|---|
-| 🔒 HTTPS = green lock in browser | SSL certificate installed, secure connection |
-| Production ≠ development | Configs differ, errors happen differently |
-| Analytics = know your customers (Plausible/GA) | First real visitor appears on dashboard |
-| CDN = fast loading worldwide | Images served from edge, pages load faster |
-| 404 page + loading states = professional UX | Broken links show helpful page, not errors |
-| Rollback = safety net | If deploy breaks, revert to previous version |
-| Production tool: **pino** for structured logs | Logs are JSON, readable, parseable |
-| Production tool: **Nginx/Caddy** as reverse proxy | Handles SSL, static files, load balancing |
+| **SEO** | Meta tags, Open Graph, sitemap.xml, Google Search Console. |
+| **Performance** | Image optimization, lazy loading, CDN, Lighthouse audit. |
+| **Security** | Rate limiting, input validation, CORS, HTTPS enforcement. Cookie consent banner. Privacy page. |
+| **Break case** | Mixed content warning (HTTP asset on HTTPS page). Owner traces via browser console, fixes to HTTPS. |
+| **Analytics event** | Track Lighthouse score over time. |
 
-**The milestone moment:** Owner visits their site on their domain with HTTPS → analytics shows first visitor → "It's a real website now."
+**Key outcomes:**
+- Site passes Lighthouse audit
+- HTTPS enforced, no mixed content
+- Cookie consent + privacy page live
+- SEO meta tags + Open Graph working
+- Can debug mixed content and CORS errors
 
 ---
 
-## Session 8 — "Solo + Community"
+## Session 8 — "Full Circle"
 
-**Goal:** Owner builds a feature entirely alone. Graduates into the network.
+**Goal:** Solo build. Review growth. Community entry. Handoff.
 
-| Key points to present | Owner should walk away knowing |
+| Phase | Key points to present |
 |---|---|
-| **Solo challenge:** mentor watches silently | Owner writes all prompts, reads all code, fixes all errors |
-| PromptAudit log review | See improvement across 7 sessions |
-| Community entry | Other owners, vertical channels, monthly AMA |
-| Scale handoff conversation | When to call for help, pricing, next steps |
+| **Free build (60min)** | Owner builds ANYTHING they want. Mentor watches silently. They prompt, read, test, fix, deploy alone. |
+| **PromptAudit review** | Review log across all 8 sessions. See prompt quality improve. Before/after comparison. |
+| **Community showcase** | Present site to group. Answer questions. Other owners give feedback. |
+| **Handoff conversation** | When to escalate to mentor. Pricing. Managed IT options. Goal #3 activated. |
 
-**The graduation moment:** Owner presents their site to the group → other owners ask questions → they answer confidently → "I can do this."
+**Key outcomes:**
+- Solo feature built and deployed independently
+- PromptAudit log shows measurable growth
+- Joined the owner network
+- Clear escalation path for when they scale
 
 ---
 
-## Session Rhythm (Fixed, Every Session)
+## Session Rhythm (120 min, every session)
 
-| Time | Activity |
-|---|---|
-| 00-05 | Check-in, review PromptAudit feedback |
-| 05-15 | Concept — business analogy for today's layer |
-| 15-55 | BUILD — owner prompts, AI builds, code appears |
-| 55-85 | READ — owner reads every changed file, asks "what does this do?" |
-| 85-100 | Error — something breaks, trace and fix together |
-| 100-110 | Commit + push (owner runs git commands) |
-| 110-120 | Preview next session, update Build Journal |
+```
+00-05  Check-in, review PromptAudit feedback from last session
+05-15  Concept — business analogy for today's topic
+15-55  BUILD — owner prompts, AI builds, code appears
+55-85  READ — owner reads every changed file, asks "what does this do?"
+85-100 Error — break case or real error, trace and fix together
+100-110 Commit + push (owner runs git commands)
+110-120 Preview next session, update Build Journal
+```
