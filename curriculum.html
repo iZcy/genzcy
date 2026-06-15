@@ -3,95 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GenZCY — Curriculum</title>
+<title>GenZCY — Build With Vibe Curriculum</title>
 <style>
 :root {
   --bg: #0f0f1a; --card: #1a1a2e; --accent: #6c5ce7; --accent2: #00cec9;
-  --green: #00b894; --yellow: #fdcb6e; --red: #e17055;
+  --green: #00b894; --yellow: #fdcb6e; --red: #e17055; --pink: #fd79a8;
   --text: #e0e0f0; --text-dim: #8888aa; --border: #2a2a44; --bg2: #151528;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, monospace;
   background: var(--bg); color: var(--text); line-height: 1.5;
-  padding: 20px; font-size: 12px;
+  padding: 20px; font-size: 12.5px;
 }
-.container { max-width: 1400px; margin: 0 auto; }
+.container { max-width: 1440px; margin: 0 auto; }
 h1 { font-size: 22px; margin-bottom: 2px; color: var(--accent2); }
 .subtitle { color: var(--text-dim); margin-bottom: 14px; font-size: 13px; }
+h2 { font-size: 16px; color: var(--accent2); margin: 28px 0 12px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 13px; color: var(--yellow); margin: 16px 0 8px; }
 
+/* Workflow banner */
 .workflow {
   background: linear-gradient(135deg, #1a1a2e, #16213e);
   border: 1px solid var(--accent); border-radius: 10px;
-  padding: 10px 16px; margin-bottom: 14px;
-  display: flex; align-items: center; gap: 14px; flex-wrap: wrap; font-size: 11.5px;
+  padding: 10px 16px; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 11.5px;
 }
 .workflow-title { color: var(--accent2); font-weight: bold; font-size: 12px; white-space: nowrap; }
 .step { background: var(--card); padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border); white-space: nowrap; }
 .step .num { color: var(--accent); font-weight: bold; }
 .step .hl { color: var(--yellow); }
 
-.table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); }
-
+/* Table */
+.table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 20px; }
 table {
   width: 100%; border-collapse: collapse; background: var(--card);
-  min-width: 1200px; table-layout: fixed;
+  min-width: 1300px; table-layout: fixed;
 }
-
 th {
-  background: #16213e; padding: 9px 8px; text-align: left;
-  font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px;
+  background: #16213e; padding: 8px; text-align: left;
+  font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.5px;
   color: var(--accent2); border-bottom: 2px solid var(--accent);
   position: sticky; top: 0; z-index: 2;
 }
 td {
-  padding: 8px; border-bottom: 1px solid var(--border);
-  border-right: 1px solid var(--border); vertical-align: top; font-size: 11.5px;
+  padding: 7px 8px; border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border); vertical-align: top; font-size: 11px;
   line-height: 1.5;
 }
 td:last-child { border-right: none; }
 tr:last-child td { border-bottom: none; }
 tr:hover td { background: #1e1e38; }
 
-.col-wk { width: 36px; text-align: center; font-weight: bold; color: var(--accent2); }
-.col-ses { width: 30px; text-align: center; }
-.col-hr  { width: 26px; text-align: center; color: var(--text-dim); }
-.col-layer { width: 130px; }
-.col-fe { width: 18%; }
-.col-be { width: 18%; }
-.col-do { width: 18%; }
-.col-out { width: 120px; font-size: 11px; color: var(--accent2); }
+.col-wk { width: 32px; }
+.col-ses { width: 26px; }
+.col-hr  { width: 24px; }
+.col-layer { width: 110px; }
+.col-fe { width: 17%; }
+.col-be { width: 17%; }
+.col-do { width: 17%; }
+.col-out { width: 110px; }
 
 .wk { text-align: center; font-weight: bold; color: var(--accent2); font-size: 14px; }
-.ses { text-align: center; }
+.ses { text-align: center; color: var(--text-dim); }
 .hr  { text-align: center; color: var(--text-dim); }
-.layer { font-weight: bold; color: var(--accent); }
+.layer { font-weight: bold; color: var(--accent); font-size: 10.5px; }
 
-.tag { display: inline-block; font-size: 9px; padding: 1px 5px; border-radius: 3px; margin-right: 2px; font-weight: bold; }
+.tag { display: inline-block; font-size: 8.5px; padding: 1px 4px; border-radius: 3px; margin-right: 2px; font-weight: bold; }
 .tag-c { background: #2d1b69; color: #a29bfe; }
 .tag-s { background: #1b3a2d; color: var(--green); }
 .tag-b { background: #3d2b1b; color: var(--yellow); }
 
 .hl { color: var(--yellow); }
-.env { background: var(--bg); padding: 1px 4px; border-radius: 3px; font-size: 10px; color: var(--green); }
-.err { color: var(--red); font-size: 10.5px; }
-.out { font-size: 11px; color: var(--text-dim); }
+.env { background: var(--bg); padding: 1px 4px; border-radius: 3px; font-size: 9.5px; color: var(--green); }
+.err { color: var(--red); font-size: 10px; display: block; margin-top: 3px; }
+.out { font-size: 10.5px; color: var(--accent2); }
 
-.gap td { height: 4px; background: transparent; border: none; padding: 0; }
+/* Cards for reference sections */
+.card-grid { display: grid; gap: 8px; }
+.card {
+  background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  padding: 10px 12px; font-size: 11.5px;
+}
+.card h3 { margin: 0 0 6px; }
+.card-grid-2 { grid-template-columns: 1fr 1fr; }
+.card-grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+.card-grid-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+@media (max-width: 700px) {
+  .card-grid-2, .card-grid-3, .card-grid-4 { grid-template-columns: 1fr; }
+}
 
-.legend { margin-top: 12px; display: flex; gap: 14px; flex-wrap: wrap; font-size: 10.5px; color: var(--text-dim); }
+/* Concept grid */
+.concept-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 16px; }
+.concept-item {
+  background: var(--card); border: 1px solid var(--border); border-radius: 6px;
+  padding: 7px 9px; font-size: 11px;
+}
+.concept-item .num { color: var(--accent); font-weight: bold; font-size: 10px; }
+.concept-item .name { color: var(--yellow); font-weight: bold; }
+.concept-item .why { color: var(--text-dim); font-size: 10px; display: block; margin-top: 2px; }
+.concept-item .wk { color: var(--accent2); font-size: 9px; }
+
+/* Diagnostic flow */
+.diag { display: flex; gap: 0; margin: 12px 0; flex-wrap: wrap; }
+.diag-item {
+  flex: 1; min-width: 140px; background: var(--card);
+  border: 1px solid var(--border); padding: 8px 10px; font-size: 11px;
+  border-right: none; position: relative;
+}
+.diag-item:last-child { border-right: 1px solid var(--border); }
+.diag-item .d-title { font-weight: bold; color: var(--accent2); font-size: 10px; }
+.diag-item .d-step { color: var(--text-dim); font-size: 10px; }
+.diag-item .d-q { color: var(--yellow); font-size: 10px; }
+.diag-arrow { color: var(--accent); font-size: 18px; line-height: 40px; padding: 0 2px; }
+
+/* Toolkit table */
+.tk-table { width: 100%; border-collapse: collapse; font-size: 11px; margin: 8px 0; }
+.tk-table th { background: #16213e; padding: 6px 8px; text-align: left; font-size: 10px; color: var(--accent2); border-bottom: 1px solid var(--accent); }
+.tk-table td { padding: 5px 8px; border-bottom: 1px solid var(--border); }
+
+/* Legend */
+.legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: 10.5px; color: var(--text-dim); margin-bottom: 10px; }
 .legend span { display: flex; align-items: center; gap: 4px; }
 .track-fe { color: var(--accent2); font-weight: bold; }
 .track-be { color: var(--yellow); font-weight: bold; }
 .track-do { color: var(--green); font-weight: bold; }
 
+/* Total bar */
 .total {
   margin-top: 10px; padding: 8px 14px;
   background: var(--card); border: 1px solid var(--border); border-radius: 8px;
-  font-size: 11.5px; color: var(--text-dim);
+  font-size: 11px; color: var(--text-dim);
   display: flex; gap: 16px; flex-wrap: wrap;
 }
 .total strong { color: var(--accent2); }
+
+ul, ol { padding-left: 18px; margin: 4px 0; }
+li { margin-bottom: 2px; }
+code { background: var(--bg); padding: 1px 5px; border-radius: 3px; font-size: 10px; color: var(--green); }
 </style>
 </head>
 <body>
@@ -114,10 +163,11 @@ tr:hover td { background: #1e1e38; }
   <span>■ <span class="tag tag-c">C</span> Concept</span>
   <span>■ <span class="tag tag-s">S</span> SEE / inspect</span>
   <span>■ <span class="tag tag-b">B</span> BUILD via prompt</span>
-  <span>■ <span class="err">✕</span> Error logging</span>
+  <span>■ <span style="color:var(--red)">✕</span> Error logging</span>
   <span>■ <span class="track-fe">Frontend</span> · <span class="track-be">Backend</span> · <span class="track-do">DevOps</span></span>
 </div>
 
+<!-- ══════════════ MAIN TABLE ══════════════ -->
 <div class="table-wrap">
 <table>
 <colgroup>
@@ -135,200 +185,208 @@ tr:hover td { background: #1e1e38; }
 </thead>
 <tbody>
 
-<!-- ══════════════ WEEK 1 ══════════════ -->
+<!-- S1 -->
 <tr>
   <td class="wk" rowspan="2">W1</td>
   <td class="ses">1</td><td class="hr">2h</td>
   <td class="layer">Internet + Dev Env</td>
   <td>
-    <span class="tag tag-c">C</span> HTML/CSS concept · DOM<br>
-    <span class="tag tag-s">S</span> DevTools Elements + Network waterfall<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Homepage with name, tagline, hero"</span><br>
-    <span class="err">✕ Console basics · 404s</span>
+    <span class="tag tag-c">C</span> Full-stack map · HTML/CSS concept · DOM tree<br>
+    <span class="tag tag-s">S</span> DevTools Elements + Network waterfall on any live site<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Create homepage with name, tagline, hero"</span> → read the HTML<br>
+    <span class="err">✕ Console basics · 404s · missing closing tags</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> Client-server · request lifecycle<br>
-    <span class="tag tag-s">S</span> Terminal output · Node process<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Run an HTTP server for my site"</span><br>
-    <span class="err">✕ "command not found" · npm fail</span>
+    <span class="tag tag-c">C</span> Client-server model · HTTP request lifecycle<br>
+    <span class="tag tag-s">S</span> Terminal output · Node.js process · local vs production environments<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Run a simple HTTP server for my site"</span><br>
+    <span class="err">✕ "command not found" · npm install failures · exit codes</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> Git = save points · GitHub = cloud<br>
-    <span class="tag tag-s">S</span> <span class="env">git init</span> · <span class="env">git log</span> · VS Code tree<br>
-    <span class="tag tag-b">B</span> <span class="hl">git add/commit/push</span> via OpenCode<br>
+    <span class="tag tag-c">C</span> Git = save points/undo · GitHub = cloud backup<br>
+    <span class="tag tag-s">S</span> <span class="env">git init</span> · <span class="env">git log</span> · VS Code file tree · GitHub account setup<br>
+    <span class="tag tag-b">B</span> <span class="hl">git add/commit/push</span> via OpenCode auto-workflow<br>
     <span class="err">✕ Exit codes · merge conflict intro</span>
   </td>
-  <td class="out">GitHub repo live · first site · can read files in VS Code</td>
+  <td class="out">GitHub repo live · first site built from prompt · can read files in VS Code · understands prompt→commit loop</td>
 </tr>
+
+<!-- S2 -->
 <tr>
   <td class="ses">2</td><td class="hr">2h</td>
   <td class="layer">Domain + PromptAudit</td>
   <td>
-    <span class="tag tag-c">C</span> HTTPS · browser security indicators<br>
-    <span class="tag tag-s">S</span> SSL cert in URL bar · mixed content<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Add SSL cert to dev server"</span><br>
-    <span class="err">✕ SSL mismatch · mixed content warnings</span>
+    <span class="tag tag-c">C</span> HTTPS · browser security indicators · mixed content<br>
+    <span class="tag tag-s">S</span> SSL cert in URL bar · inspect live site's cert details<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Enable HTTPS on my dev server"</span><br>
+    <span class="err">✕ SSL mismatch · mixed content warnings · cert expired</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> Domain · DNS · hosting<br>
-    <span class="tag tag-s">S</span> <span class="env">dig</span> / <span class="env">nslookup</span> · DNS records<br>
-    <span class="tag tag-b">B</span> <span class="hl">Buy domain · point DNS to server</span><br>
-    <span class="err">✕ DNS not resolving · TTL delays</span>
+    <span class="tag tag-c">C</span> Domain · DNS · hosting — how they connect<br>
+    <span class="tag tag-s">S</span> <span class="env">dig</span> / <span class="env">nslookup</span> — inspect DNS records (A, CNAME, MX)<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Buy a domain (or use existing) · point DNS to my server"</span><br>
+    <span class="err">✕ DNS not resolving · TTL propagation delays</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> PromptAudit · environments (local vs live)<br>
-    <span class="tag tag-s">S</span> PromptAudit dashboard · <span class="env">git log --oneline</span><br>
-    <span class="tag tag-b">B</span> <span class="hl">Toggle PromptAudit ON · review first 3 prompts</span><br>
-    <span class="err">✕ Proxy not running · port conflicts</span>
+    <span class="tag tag-c">C</span> PromptAudit (Side A = proxy, Side B = git) · environments (local vs live)<br>
+    <span class="tag tag-s">S</span> PromptAudit dashboard overview · <span class="env">git log --oneline</span><br>
+    <span class="tag tag-b">B</span> <span class="hl">Toggle PromptAudit ON · review first 3 prompt/response pairs</span><br>
+    <span class="err">✕ Proxy not running · port conflicts · consent not granted</span>
   </td>
-  <td class="out">Domain live · PromptAudit active · every prompt auto-commits + pushes</td>
+  <td class="out">Domain live · PromptAudit active · every prompt auto-commits + pushes · can read commit history</td>
 </tr>
 
-<!-- ══════════════ WEEK 2 ══════════════ -->
+<!-- S3 -->
 <tr>
   <td class="wk" rowspan="2">W2</td>
   <td class="ses">3</td><td class="hr">2h</td>
   <td class="layer">Frontend — UI</td>
   <td>
-    <span class="tag tag-c">C</span> HTML structure · CSS layout · DOM tree<br>
-    <span class="tag tag-s">S</span> DevTools Elements → inspect ANY site · edit CSS live<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Landing page with brand colors, hero, service cards, footer. Mobile-first."</span><br>
-    <span class="err">✕ CSS specificity · missing closing tags</span>
+    <span class="tag tag-c">C</span> HTML structure (headings, lists, links, forms) · CSS layout (flexbox, grid, box model) · responsive design<br>
+    <span class="tag tag-s">S</span> DevTools Elements → inspect ANY site · edit CSS live · see box model on any element<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Landing page with brand colors, hero, services cards, footer. Mobile-first."</span><br>
+    <span class="err">✕ CSS specificity · styles not applying · missing closing tags · viewport issues</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> Static vs dynamic content<br>
-    <span class="tag tag-s">S</span> Network tab — inspect page asset loading<br>
-    <span class="tag tag-b">B</span> <span class="hl">—</span> (focus frontend)<br>
+    <span class="tag tag-c">C</span> Static vs dynamic content — what needs a server vs what doesn't<br>
+    <span class="tag tag-s">S</span> Network tab — inspect which assets load (HTML, CSS, JS, images) · see load times<br>
+    <span class="tag tag-b">B</span> <span class="hl">—</span> (focus frontend this session)<br>
     <span class="err">—</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> Commit discipline · descriptive messages<br>
-    <span class="tag tag-s">S</span> <span class="env">git diff</span> — what changed between prompts<br>
-    <span class="tag tag-b">B</span> <span class="hl">Review commit history: what did each prompt do?</span><br>
-    <span class="err">✕ Forgot to commit · uncommitted changes</span>
+    <span class="tag tag-c">C</span> Commit discipline · writing descriptive messages<br>
+    <span class="tag tag-s">S</span> <span class="env">git diff</span> — see exactly what changed between prompts (green = added, red = removed)<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Review my commit history: can I tell what each prompt did from the message?"</span><br>
+    <span class="err">✕ Forgot to commit · uncommitted changes lost · vague messages</span>
   </td>
-  <td class="out">Branded responsive landing page · can inspect ANY site's DOM · reads diffs</td>
+  <td class="out">Branded responsive landing page · can inspect ANY site's DOM · reads diffs · writes descriptive commits</td>
 </tr>
+
+<!-- S4 -->
 <tr>
   <td class="ses">4</td><td class="hr">2h</td>
   <td class="layer">Frontend — Interaction</td>
   <td>
-    <span class="tag tag-c">C</span> JS events · state · interactivity · components<br>
-    <span class="tag tag-s">S</span> DevTools Console (errors + line#) · Network (XHR/status)<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Mobile hamburger menu, testimonial carousel, pricing components"</span><br>
-    <span class="err">✕ TypeError · null is not object · script 404</span>
+    <span class="tag tag-c">C</span> JS events (click, submit) · state management (what data is on screen) · component reusability<br>
+    <span class="tag tag-s">S</span> DevTools Console (errors + line numbers) · Network (XHR/fetch, status codes) · Lighthouse audit<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Mobile hamburger menu, testimonial carousel, pricing cards as components"</span><br>
+    <span class="err">✕ Uncaught TypeError · null is not object · script 404 · event not firing</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> Client vs server rendering<br>
-    <span class="tag tag-s">S</span> AJAX/fetch calls in Network tab<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Mock API endpoint serving testimonial data"</span><br>
-    <span class="err">✕ CORS · wrong endpoint URL</span>
+    <span class="tag tag-c">C</span> Client vs server rendering · AJAX/fetch — how data moves between frontend and backend<br>
+    <span class="tag tag-s">S</span> Application tab (cookies, localStorage, sessionStorage) — see what's stored client-side<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Mock API endpoint serving testimonial JSON data"</span><br>
+    <span class="err">✕ CORS · wrong endpoint URL · data format mismatch</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> Branching (main vs feature)<br>
-    <span class="tag tag-s">S</span> GitHub PR view · branch switcher<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Feature branch → build carousel → merge to main"</span><br>
-    <span class="err">✕ Merge conflicts (resolve with AI)</span>
+    <span class="tag tag-c">C</span> Branching (main vs feature branches) · PR workflow<br>
+    <span class="tag tag-s">S</span> GitHub PR view · branch switcher in VS Code<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Create feature branch → build carousel → merge to main via PR"</span><br>
+    <span class="err">✕ Merge conflicts (resolve with AI) · wrong base branch</span>
   </td>
-  <td class="out">Interactive site · 3 components · can trace JS errors to line# · knows branches</td>
+  <td class="out">Interactive site with 3 components · can trace JS errors to line# · knows branches · Lighthouse audit passed</td>
 </tr>
 
-<!-- ══════════════ WEEK 3 ══════════════ -->
+<!-- S5 -->
 <tr>
   <td class="wk" rowspan="2">W3</td>
   <td class="ses">5</td><td class="hr">2h</td>
-  <td class="layer">Backend + Database</td>
+  <td class="layer">Server + Database</td>
   <td>
-    <span class="tag tag-c">C</span> Dynamic UI rendering from API<br>
-    <span class="tag tag-s">S</span> DevTools → see API response data in DOM<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Display services list from API on homepage"</span><br>
-    <span class="err">✕ Data not showing · wrong field names</span>
+    <span class="tag tag-c">C</span> Dynamic UI that reads/writes from/to an API<br>
+    <span class="tag tag-s">S</span> DevTools → see API response rendered in DOM · Network tab → see the request/response cycle<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Display services list from my API on the homepage"</span><br>
+    <span class="err">✕ Data not showing · wrong field names · empty state handling</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> Server = kitchen · DB = pantry · logic = recipes<br>
-    <span class="tag tag-s">S</span> Server logs · <span class="env">DB browser</span> → tables/rows/relationships · SELECT<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Customer has many Bookings, Booking belongs to Service. CRUD API."</span><br>
-    <span class="err">✕ Stack trace (file:line) · DB connection refused · query syntax</span>
+    <span class="tag tag-c">C</span> Server = kitchen · DB = pantry · logic = recipes · ORM = kitchen appliance<br>
+    <span class="tag tag-s">S</span> Server logs (stdout/stderr, each request logged) · <span class="env">DB browser</span> → tables, rows, relationships · run SELECT query<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Customer has many Bookings, Booking belongs to one Service. Generate CRUD API."</span> → read schema + API code<br>
+    <span class="err">✕ Stack trace (file:line) · DB connection refused · query syntax · migration missing</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> Environment variables · <span class="env">.env</span> for DB URL<br>
-    <span class="tag tag-s">S</span> Read <span class="env">.env</span> · see DB credentials<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Move DB config to .env, add to .gitignore"</span><br>
-    <span class="err">✕ .env not loaded · gitignore missing</span>
+    <span class="tag tag-c">C</span> Environment variables · <span class="env">.env</span> for DB URL + credentials<br>
+    <span class="tag tag-s">S</span> Read <span class="env">.env</span> · see DB connection string · check <span class="env">.gitignore</span> protects it<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Move DB config to .env, add .env to .gitignore"</span><br>
+    <span class="err">✕ .env not loaded · .env committed to repo · credentials exposed</span>
   </td>
-  <td class="out">DB with real data · API endpoints · can read stack traces · .env discipline</td>
+  <td class="out">DB with real data · API endpoints · can read stack traces · .env discipline · knows server→DB flow</td>
 </tr>
+
+<!-- S6 -->
 <tr>
   <td class="ses">6</td><td class="hr">2h</td>
   <td class="layer">Auth + API Integration</td>
   <td>
-    <span class="tag tag-c">C</span> Auth UI · login/logout UX<br>
-    <span class="tag tag-s">S</span> Network tab → see auth token in request headers<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Login page, protected booking form, logout button"</span><br>
-    <span class="err">✕ Token expired · redirect loops</span>
+    <span class="tag tag-c">C</span> Auth UI — login page, logout button, protected content<br>
+    <span class="tag tag-s">S</span> Network tab → see auth token in request headers · Application tab → cookies/JWT<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Login page with email/password · protected booking form · logout button"</span><br>
+    <span class="err">✕ Token expired · redirect loops · form submits before auth check</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> Auth (passwords/tokens) · API integration<br>
-    <span class="tag tag-s">S</span> Application tab → JWT/cookies · <span class="env">.env</span> for API keys<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Email/password login. Connect booking to WhatsApp API."</span><br>
-    <span class="err">✕ 400/401/403/500 · API key invalid · rate limited</span>
+    <span class="tag tag-c">C</span> Authentication (passwords, tokens, JWT, sessions) · Authorization (roles, permissions) · API integration patterns<br>
+    <span class="tag tag-s">S</span> <span class="env">.env</span> for API keys · Network tab → raw JSON request/response (headers, body, status)<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Email/password login. Connect booking form to WhatsApp API (or payment gateway)."</span><br>
+    <span class="err">✕ 400 (bad request) · 401 (unauthorized) · 403 (forbidden) · 500 (server error) · API key invalid · rate limited</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> Secrets management · never commit API keys<br>
-    <span class="tag tag-s">S</span> Audit <span class="env">.env</span> · check <span class="env">.gitignore</span><br>
+    <span class="tag tag-c">C</span> Secrets management — NEVER commit API keys to git<br>
+    <span class="tag tag-s">S</span> Full <span class="env">.env</span> audit · check <span class="env">.gitignore</span> · test if secrets leak to client-side<br>
     <span class="tag tag-b">B</span> <span class="hl">"Add webhook endpoint for WhatsApp delivery receipts"</span><br>
-    <span class="err">✕ Secret leaked in client-side code</span>
+    <span class="err">✕ Secret leaked in client-side code · .env missing from .gitignore · hardcoded key</span>
   </td>
-  <td class="out">Login + WhatsApp/payment live · can diagnose API errors · .env audit</td>
+  <td class="out">Login + integration live · can diagnose API errors by status code · .env fully audited · secrets safe</td>
 </tr>
 
-<!-- ══════════════ WEEK 4 ══════════════ -->
+<!-- S7 -->
 <tr>
   <td class="wk" rowspan="2">W4</td>
   <td class="ses">7</td><td class="hr">2h</td>
   <td class="layer">Deploy + Security + Analytics</td>
   <td>
-    <span class="tag tag-c">C</span> Production vs dev · analytics dashboards<br>
-    <span class="tag tag-s">S</span> Live site on real domain · check HTTPS<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Add analytics tracking to all pages"</span><br>
-    <span class="err">✕ Analytics script blocked · wrong tracking ID</span>
+    <span class="tag tag-c">C</span> Production vs dev environment · analytics dashboards<br>
+    <span class="tag tag-s">S</span> Live site on real domain · verify HTTPS in URL bar · analytics dashboard → see real visitor data<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Install analytics (Plausible/GA), track form submissions as conversion events"</span><br>
+    <span class="err">✕ Analytics script blocked by ad-blocker · wrong tracking ID · no data showing</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> Production server config<br>
-    <span class="tag tag-s">S</span> Production logs (tail) · build output files<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Deploy to production. Enable HTTPS. Monitor server health."</span><br>
-    <span class="err">✕ Prod error → check logs · deploy rollback</span>
+    <span class="tag tag-c">C</span> Production server config · build process · error monitoring<br>
+    <span class="tag tag-s">S</span> Production logs (tail) · build output files (bundled HTML/CSS/JS) · compare dev vs prod configs<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Deploy to production. Enable HTTPS. Set up health monitoring."</span><br>
+    <span class="err">✕ Prod error → check logs · build failed · env vars missing in prod · rollback strategy</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> Environments (local/staging/prod) · rollback plan<br>
-    <span class="tag tag-s">S</span> Full <span class="env">.env</span> audit · rate limiting test<br>
-    <span class="tag tag-b">B</span> <span class="hl">"Move secrets to .env, add rate limiting, set up Plausible/GA goals"</span><br>
-    <span class="err">✕ Deploy broke something · compare dev vs prod</span>
+    <span class="tag tag-c">C</span> Environments (local/staging/prod) · rollback plan · rate limiting<br>
+    <span class="tag tag-s">S</span> Full security audit: <span class="env">.env</span>, <span class="env">.gitignore</span>, exposed endpoints, HTTPS cert<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Move all secrets to .env · add rate limiting to booking · set up analytics goals"</span><br>
+    <span class="err">✕ Deploy broke something · compare dev vs prod · rollback to previous commit</span>
   </td>
-  <td class="out">Live HTTPS site · .env secured · analytics tracking · knows rollback strategy</td>
+  <td class="out">Live HTTPS site · .env fully secured · analytics tracking real data · knows rollback strategy</td>
 </tr>
+
+<!-- S8 -->
 <tr>
   <td class="ses">8</td><td class="hr">2h</td>
-  <td class="layer">AI Solo + Handoff</td>
+  <td class="layer">AI + Community + Handoff</td>
   <td>
-    <span class="tag tag-c">C</span> AI prompting · context · self-sufficiency<br>
-    <span class="tag tag-s">S</span> Self-review PromptAudit log · full codebase walkthrough<br>
-    <span class="tag tag-b">B</span> <span class="hl">SOLO: "Add a new page with [feature]" — mentor watches silently</span><br>
-    <span class="err">✕ AI hallucination — detect what AI invented</span>
+    <span class="tag tag-c">C</span> AI prompting best practices · context window · giving AI enough info (schema, style, constraints)<br>
+    <span class="tag tag-s">S</span> <span class="hl">Self-review PromptAudit log</span> — how did prompts improve over 7 sessions? · full codebase walkthrough<br>
+    <span class="tag tag-b">B</span> <span class="hl">SOLO: "Add a new page with [feature]" — mentor watches silently, doesn't help</span><br>
+    <span class="err">✕ AI hallucination — detect what the AI invented · verify every generated feature</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> When to call for help · scale triggers<br>
-    <span class="tag tag-s">S</span> Community site tour · see what's possible later<br>
-    <span class="tag tag-b">B</span> <span class="hl">Solo feature backend: data model + API + integration</span><br>
-    <span class="err">✕ Solo debugging: apply 5-layer diagnostic flow</span>
+    <span class="tag tag-c">C</span> When to call for help · what info to provide (5-layer diagnostic flow) · scale triggers<br>
+    <span class="tag tag-s">S</span> Community site tour — see what other owners built · what's possible in phase 2/3<br>
+    <span class="tag tag-b">B</span> <span class="hl">Solo: data model + API + integration for the new feature</span><br>
+    <span class="err">✕ Solo debugging — apply 5-layer diagnostic flow independently</span>
   </td>
   <td>
-    <span class="tag tag-c">C</span> Managed IT handoff · pricing · what's next<br>
-    <span class="tag tag-s">S</span> PromptAudit graduation report · commit history as portfolio<br>
-    <span class="tag tag-b">B</span> <span class="hl">Community showcase · handoff conversation</span><br>
-    <span class="err">✕ Final: "What if site goes down?" — know response plan</span>
+    <span class="tag tag-c">C</span> Managed IT handoff model · pricing · what's next<br>
+    <span class="tag tag-s">S</span> PromptAudit graduation report · commit history as portfolio · community entry<br>
+    <span class="tag tag-b">B</span> <span class="hl">Community showcase · "what my site does" presentation · handoff conversation</span><br>
+    <span class="err">✕ Final test: "site goes down at 2AM" — know the response plan</span>
   </td>
-  <td class="out">Solo capable · networked · clear scale path back to mentor</td>
+  <td class="out">Solo capable · networked in community · clear scale path back to mentor · PromptAudit as portfolio</td>
 </tr>
 
 </tbody>
@@ -336,11 +394,257 @@ tr:hover td { background: #1e1e38; }
 </div>
 
 <div class="total">
-  <span>Total: <strong>8 sessions × 2h = 16 hours</strong></span>
-  <span>·</span>
-  <span>Every session: <strong style="color:var(--yellow)">prompt → build → READ code → commit → push</strong></span>
-  <span>·</span>
-  <span>Stack: OpenCode + VS Code + Git + GitHub + DevTools + DB Browser</span>
+  <span>■ Total: <strong>8 sessions × 2h = 16 hours</strong></span>
+  <span>■ Stack: OpenCode + VS Code + Git + GitHub + Browser DevTools + DB Browser</span>
+  <span>■ Every session: <strong style="color:var(--yellow)">prompt → build → READ code → commit → push</strong></span>
+</div>
+
+<!-- ══════════════ PHILOSOPHY & GOALS ══════════════ -->
+<h2>1. Program Philosophy &amp; the 3 Goals</h2>
+<div class="card-grid card-grid-4">
+  <div class="card">
+    <h3 style="color:var(--accent2)">🎯 Goal #1 — Community</h3>
+    Every graduate joins a network of business-owner builders. Shared vocabulary = shared identity = natural referrals and collaboration.
+  </div>
+  <div class="card">
+    <h3 style="color:var(--yellow)">🧠 Goal #2 — Common Knowledge</h3>
+    After 4 weeks, you speak the full-stack map fluently. Every conversation about your website becomes faster, clearer, cheaper.
+  </div>
+  <div class="card">
+    <h3 style="color:var(--green)">📈 Goal #3 — Scale</h3>
+    When your business grows beyond vibe coding, you already have a trusted partner who knows your architecture. Growth returns to mentor for managed IT.
+  </div>
+  <div class="card">
+    <h3 style="color:var(--pink)">📐 Philosophy</h3>
+    Traditional education teaches you to <em>write code</em>. This teaches you to <em>architect systems</em> and <em>direct AI to build them</em>. You become an architect who can commission, verify, and maintain software.
+  </div>
+</div>
+
+<!-- ══════════════ FULL-STACK MAP ══════════════ -->
+<h2>2. The Full-Stack Map (Your Vocabulary)</h2>
+<div class="card-grid card-grid-4">
+  <div class="card" style="border-left: 3px solid var(--accent);">
+    <strong>🌐 Internet</strong><br>
+    <span style="color:var(--text-dim)">Domain · DNS · Hosting · HTTPS</span><br>
+    <span style="font-size:10px;color:var(--accent2)">Your shop front on the web</span>
+  </div>
+  <div class="card" style="border-left: 3px solid var(--accent2);">
+    <strong>🎨 Frontend</strong><br>
+    <span style="color:var(--text-dim)">HTML · CSS · JavaScript</span><br>
+    <span style="font-size:10px;color:var(--accent2)">What customers see and touch</span>
+  </div>
+  <div class="card" style="border-left: 3px solid var(--yellow);">
+    <strong>⚙️ Backend</strong><br>
+    <span style="color:var(--text-dim)">Server · Business Logic · Auth</span><br>
+    <span style="font-size:10px;color:var(--accent2)">What happens behind the counter</span>
+  </div>
+  <div class="card" style="border-left: 3px solid var(--green);">
+    <strong>🗄️ Database</strong><br>
+    <span style="color:var(--text-dim)">Tables · Records · Relationships</span><br>
+    <span style="font-size:10px;color:var(--accent2)">Your filing cabinet</span>
+  </div>
+  <div class="card" style="border-left: 3px solid var(--pink);">
+    <strong>🔌 Integration</strong><br>
+    <span style="color:var(--text-dim)">APIs</span><br>
+    <span style="font-size:10px;color:var(--accent2)">Connecting to the outside world</span>
+  </div>
+  <div class="card" style="border-left: 3px solid #a29bfe;">
+    <strong>🛠️ Development</strong><br>
+    <span style="color:var(--text-dim)">Git · GitHub · Local Environment</span><br>
+    <span style="font-size:10px;color:var(--accent2)">Your workshop</span>
+  </div>
+  <div class="card" style="border-left: 3px solid var(--red);">
+    <strong>🚀 Deployment</strong><br>
+    <span style="color:var(--text-dim)">Build · Hosting · CI/CD</span><br>
+    <span style="font-size:10px;color:var(--accent2)">Opening the shop to the public</span>
+  </div>
+  <div class="card" style="border-left: 3px solid #e17055;">
+    <strong>🔒 Security</strong><br>
+    <span style="color:var(--text-dim)">Passwords · Permissions · Secrets</span><br>
+    <span style="font-size:10px;color:var(--accent2)">Keeping things safe</span>
+  </div>
+  <div class="card" style="border-left: 3px solid #fdcb6e;">
+    <strong>📊 Analytics</strong><br>
+    <span style="color:var(--text-dim)">Visitors · Leads · Conversions</span><br>
+    <span style="font-size:10px;color:var(--accent2)">Understanding your customers</span>
+  </div>
+  <div class="card" style="border-left: 3px solid #a29bfe;">
+    <strong>🤖 AI Development</strong><br>
+    <span style="color:var(--text-dim)">Prompting · Context · Vibe Coding</span><br>
+    <span style="font-size:10px;color:var(--accent2)">Your new superpower</span>
+  </div>
+</div>
+
+<!-- ══════════════ 12 ARCHITECTURAL CONCEPTS ══════════════ -->
+<h2>4. The 12 Architectural Concepts (for Better Prompting)</h2>
+<div class="concept-grid">
+  <div class="concept-item"><span class="num">1</span> <span class="name">Client-Server</span><span class="wk"> (W1)</span><span class="why">Know what lives where. "Validate on frontend, submit to backend."</span></div>
+  <div class="concept-item"><span class="num">2</span> <span class="name">HTTP &amp; Request Lifecycle</span><span class="wk"> (W1)</span><span class="why">URL → DNS → server → response. Debug "why is this blank?"</span></div>
+  <div class="concept-item"><span class="num">3</span> <span class="name">Frontend vs Backend</span><span class="wk"> (W2/W3)</span><span class="why">Specify WHICH side a feature belongs to in prompts.</span></div>
+  <div class="concept-item"><span class="num">4</span> <span class="name">Data Modeling</span><span class="wk"> (W3)</span><span class="why">THE most important skill. "User has many Orders" → AI builds right schema.</span></div>
+  <div class="concept-item"><span class="num">5</span> <span class="name">CRUD Operations</span><span class="wk"> (W3)</span><span class="why">90% of features = Create, Read, Update, Delete. Frame requests in these terms.</span></div>
+  <div class="concept-item"><span class="num">6</span> <span class="name">API (REST)</span><span class="wk"> (W3)</span><span class="why">"GET /orders returns order history" — how frontend talks to backend.</span></div>
+  <div class="concept-item"><span class="num">7</span> <span class="name">Auth &amp; Authorization</span><span class="wk"> (W3)</span><span class="why">"Users log in with Google" vs "Admins can delete" = different architecture.</span></div>
+  <div class="concept-item"><span class="num">8</span> <span class="name">State Management</span><span class="wk"> (W2/W3)</span><span class="why">"After saving, update list without refresh" requires state-awareness.</span></div>
+  <div class="concept-item"><span class="num">9</span> <span class="name">Error Handling</span><span class="wk"> (W1-W4)</span><span class="why">"What if email invalid?" + "What if DB down?" = robust prompts.</span></div>
+  <div class="concept-item"><span class="num">10</span> <span class="name">Environment &amp; Secrets</span><span class="wk"> (W3/W4)</span><span class="why">API keys / DB URLs belong in .env, not code. Essential security.</span></div>
+  <div class="concept-item"><span class="num">11</span> <span class="name">Deployment Envs</span><span class="wk"> (W4)</span><span class="why">Local vs staging vs production. "Don't break my live site."</span></div>
+  <div class="concept-item"><span class="num">12</span> <span class="name">Monitoring &amp; Observability</span><span class="wk"> (W4)</span><span class="why">Logs, metrics, alerts. Know when something's wrong, describe it.</span></div>
+</div>
+
+<!-- ══════════════ PHASE 0 — ONBOARDING AUDIT ══════════════ -->
+<h2>3. Phase 0 — Onboarding Audit</h2>
+<div class="card">
+  <strong>When:</strong> Session 0, 60-90 min before Week 1.<br>
+  <strong>Purpose:</strong> Every owner is different. The audit shapes the vertical sleeve, pacing, and integrations.
+  <table class="tk-table" style="margin-top:6px">
+    <tr><th>Area</th><th>Question</th><th>Outcome</th></tr>
+    <tr><td><strong>Business</strong></td><td>What do you sell? Who buys? What must the site achieve?</td><td>Owner's VMG (Vision/Mission/Goals for site)</td></tr>
+    <tr><td><strong>Vertical</strong></td><td>Lead-gen / e-com / booking / portfolio / community / content?</td><td>Sleeve selection</td></tr>
+    <tr><td><strong>Assets</strong></td><td>Domain? Logo? Colors? Fonts? Photos? Copy?</td><td>Asset checklist</td></tr>
+    <tr><td><strong>Tech comfort</strong></td><td>Used terminal/Git? Built anything? Used AI?</td><td>Pacing: beginner / intermediate</td></tr>
+    <tr><td><strong>Integrations</strong></td><td>Payments? WhatsApp? Calendar/Calendly? Maps? CRM?</td><td>Week 3 integration pick</td></tr>
+    <tr><td><strong>KPIs</strong></td><td>What does success look like in 30/60/90 days?</td><td>Analytics targets</td></tr>
+    <tr><td><strong>Scale intent</strong></td><td>Grow? Add branches? Hire? Franchise?</td><td>Goal #3 handoff plan</td></tr>
+    <tr><td><strong>Prompting exp</strong></td><td>Used ChatGPT/Claude? For what? How comfortable?</td><td>PromptAudit baseline</td></tr>
+  </table>
+  <strong>Output:</strong> Owner's Build Journal — a living document tracking VMG, goals per week, PromptAudit link, and adjustments.
+</div>
+
+<!-- ══════════════ 5-LAYER DIAGNOSTIC FLOW ══════════════ -->
+<h2>10. The 5-Layer Diagnostic Flow</h2>
+<p style="color:var(--text-dim);font-size:11px;margin-bottom:8px;">When something breaks, trace it from the user's screen to the database. By the time you call your mentor, say: <em>"Booking form returns 500. Server log says WhatsApp API returned 401. Checked .env, API key looks correct."</em></p>
+<div class="diag">
+  <div class="diag-item">
+    <div class="d-title">Layer 1: User Report</div>
+    <div class="d-step">"The booking form isn't working"</div>
+    <div class="d-q">↓ What exactly happens? Error message? Blank page?</div>
+  </div>
+  <div class="diag-item">
+    <div class="d-title">Layer 2: Browser Console</div>
+    <div class="d-step">DevTools → Console tab (errors?) + Network tab (status codes?)</div>
+    <div class="d-q">↓ 404 (not found) / 500 (server error) / 4xx (client)?</div>
+  </div>
+  <div class="diag-item">
+    <div class="d-title">Layer 3: Server Logs</div>
+    <div class="d-step">Check server console/log · find failed request · read stack trace</div>
+    <div class="d-q">↓ Which file:line? What was passed vs expected?</div>
+  </div>
+  <div class="diag-item">
+    <div class="d-title">Layer 4: Database</div>
+    <div class="d-step">Open DB browser · table exist? Columns correct? Data there?</div>
+    <div class="d-q">↓ Try manual query. Null? Wrong type? Missing?</div>
+  </div>
+  <div class="diag-item">
+    <div class="d-title">Layer 5: External API</div>
+    <div class="d-step">Is WhatsApp/payment/Maps working? API key valid? Rate limit?</div>
+    <div class="d-q">↓ Outage? Expired key? Config mismatch?</div>
+  </div>
+</div>
+
+<!-- ══════════════ OWNER'S TECHNICAL TOOLKIT ══════════════ -->
+<h2>11. Owner's Technical Toolkit</h2>
+<table class="tk-table">
+  <tr><th style="width:30%">Tool</th><th style="width:35%">✅ Can DO</th><th style="width:35%">🔍 Can READ / DIAGNOSE</th></tr>
+  <tr><td><strong>VS Code</strong></td><td>Open files, edit text, run terminal, install extensions</td><td>—</td></tr>
+  <tr><td><strong>Terminal</strong></td><td>Run mentor's commands, start/stop dev server, run git</td><td>Read error output, identify failure type</td></tr>
+  <tr><td><strong>Git</strong></td><td>Add, commit, push, status, log, branch</td><td>Read commit history, understand what each change was</td></tr>
+  <tr><td><strong>GitHub</strong></td><td>Clone, push, view commits online, open PRs</td><td>Read PR diff, review commit history</td></tr>
+  <tr><td><strong>OpenCode</strong></td><td>Start it, type prompts, see it build</td><td>Read the generated code in VS Code</td></tr>
+  <tr><td><strong>PromptAudit</strong></td><td>Toggle consent, review your own log</td><td>Read mentor's feedback, see prompt patterns</td></tr>
+  <tr><td><strong>Browser DevTools</strong></td><td>—</td><td>Inspect DOM, edit CSS live, read Console errors, see Network waterfall, inspect cookies/storage</td></tr>
+  <tr><td><strong>Server logs</strong></td><td>—</td><td>Read stdout/stderr, identify file:line in stack trace, understand 4xx/5xx</td></tr>
+  <tr><td><strong>DB Browser</strong></td><td>—</td><td>See tables/rows/relationships, run SELECT, spot nulls/missing data</td></tr>
+  <tr><td><strong>Analytics dashboard</strong></td><td>—</td><td>Read visitor count, conversion funnel, event stream</td></tr>
+  <tr><td><strong>.env file</strong></td><td>—</td><td>Audit what secrets exist, check for missing/duplicate entries</td></tr>
+</table>
+
+<!-- ══════════════ COMMUNITY + HANDOFF ══════════════ -->
+<h2>12. Community Playbook + 13. Scale Handoff</h2>
+<div class="card-grid card-grid-2">
+  <div class="card">
+    <h3 style="color:var(--accent2)">👥 Community (Goal #1)</h3>
+    <strong>Onboarding:</strong> Graduation showcase → private group entry → connected to 2-3 complementary owners<br>
+    <strong>Ongoing:</strong> Monthly showcase nights · vertical channels (#fb, #services, #ecom) · prompt swap threads · mentor AMA · referral bounties → network effect
+  </div>
+  <div class="card">
+    <h3 style="color:var(--green)">📈 Scale Handoff (Goal #3)</h3>
+    <strong>When to call mentor:</strong> Growth → multi-branch · team needs access · needs custom automation · performance issues · security compliance<br>
+    <strong>Phased handoff:</strong><br>
+    Phase 1: Full booking automation + calendar + payments → $X/mo<br>
+    Phase 2: Customer portal + reminders + reviews → $Y/mo<br>
+    Phase 3: Multi-staff management + analytics dashboard → $Z/mo<br>
+    <strong>Because mentor knows your architecture</strong> — no discovery phase, no "what does this code do?"
+  </div>
+</div>
+
+<!-- ══════════════ WEEKLY RETROSPECTIVE ══════════════ -->
+<h2>15. Weekly Retrospective Format</h2>
+<div class="card">
+  <strong>30 min at end of each week.</strong> Owner + mentor review progress and adjust.
+  <div class="card-grid card-grid-3" style="margin-top:6px">
+    <div class="card" style="padding:6px 8px">
+      <strong style="color:var(--accent2)">Owner Self-Assessment (5m)</strong><br>
+      Rate 1-5: understood concepts · can explain to someone else · can use tools · prompts improving · confident for next week
+    </div>
+    <div class="card" style="padding:6px 8px">
+      <strong style="color:var(--yellow)">Mentor Assessment (10m)</strong><br>
+      Review 3 random prompts from PromptAudit · review git log (descriptive commits? push working?) · 1 thing to improve · 1 thing owner excelled at
+    </div>
+    <div class="card" style="padding:6px 8px">
+      <strong style="color:var(--green)">Adjustments + Preview (10m)</strong><br>
+      Pacing right? Sleeve working? Blocker? Update Build Journal · preview next week · install tools in advance
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ BLANK SLEEVE TEMPLATE ══════════════ -->
+<h2>14. Vertical Sleeve Template</h2>
+<div class="card">
+<p style="font-size:11px;color:var(--text-dim)">Use this template when onboarding a new industry vertical. Fill in the blanks before Week 1.</p>
+<pre style="background:var(--bg);padding:8px;border-radius:6px;font-size:10.5px;color:var(--text-dim);overflow-x:auto;margin-top:4px;">
+## [Vertical Name] Sleeve
+
+### Owner Profile
+- Business type:
+- Owner comfort level:
+- Budget range:
+
+### Week 2 — Frontend Build
+- What they build:
+- UI components needed:
+- Example prompt:
+
+### Week 3 — Data Model
+- Entities:
+- Relationships:
+- CRUD operations:
+
+### Week 3 — Integration
+- Primary integration:
+- Secondary integration:
+- API setup notes:
+
+### Week 4 — KPIs
+- Primary metric:
+- Secondary metric:
+- Analytics events:
+
+### Scale Handoff
+- Most likely scale trigger:
+- Suggested handoff package:
+
+### Notes
+- Unique considerations:
+- Common pitfalls:
+- Good example sites:
+</pre>
+</div>
+
+<div class="total" style="margin-top:20px;">
+  <span>■ Total: <strong>8 sessions × 2h = 16 hours</strong></span>
+  <span>■ <strong>15 curriculum sections</strong> in one page</span>
+  <span>■ <strong>Every session:</strong> prompt → build → READ code → commit → push</span>
 </div>
 
 </div>
