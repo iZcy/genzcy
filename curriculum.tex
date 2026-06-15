@@ -5,9 +5,13 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{parskip}
+\usepackage{enumitem}
 
-\renewcommand{\arraystretch}{1.4}
+\renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{5pt}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlist[itemize]{nosep,leftmargin=*,before={\vspace{-0.5\baselineskip}},after={\vspace{-\baselineskip}}}
 
 \begin{document}
 
@@ -29,18 +33,88 @@
 
 % Session table
 \noindent
-\begin{tabularx}{\textwidth}{c p{3.5cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{5cm}}
+\begin{tabularx}{\textwidth}{c P{2.8cm} L P{4.8cm}}
 \toprule
 \textbf{Sesi} & \textbf{Judul} & \textbf{Points} & \textbf{Output}\\
 \midrule
-1 & Introduction to Vibe Coding Responsibly & Perbandingan Campus vs Praktek vs Vibe Code. Sejarah development. OpenCode + PromptAudit. Zero-level vanilla (HTML/CSS/JS, JS backend, SQLite). Deploy ke Netlify via GitHub. & Website vanilla pertama live di Netlify. Paham perbedaan 3 jalur karir. PromptAudit aktif.\\
-2 & The Prompt Architect & Sejarah AI: expert systems ke LLM. Manajemen konteks (MCPs, Skills, Markdowns). SDLC \& Blackbox Dev. Clean code, clean repo. Fork 2 project, deploy keduanya. & 2 project terdeploy dari 1 repo. Paham cara kelola konteks AI. Kode bersih tanpa debris.\\
-3 & Do Not Reinvent The Wheels & Kenapa framework ada. Vite + TailwindCSS + Express + MongoDB. Selesaikan beginner track. Deploy app berbasis framework. & Website framework pertama live. Paham kapan pakai framework vs vanilla.\\
-4 & Trust, But Verify & pino structured logging. Break case: bug sengaja, trace dan fix. Analytics (Plausible/GA). Business case: simulasi visitor. Log viewer + analytics dashboard. & Logging \& analytics terpasang. Bisa jawab: "apa yang terjadi?" (logs) + "apa yang pelanggan lakukan?" (analytics).\\
-5 & From Click to Cash & Booking form + payment gateway (Midtrans/Stripe). Webhook + email receipt. Break case: webhook failure. & Booking + payment end-to-end bekerja. Bisa debug webhook failure dari logs.\\
-6 & Know Thy Customer & JWT auth + admin dashboard + roles. Email notifications. Break case: role leak. & Login + dashboard + role-based access bekerja. Bisa debug auth error dari logs.\\
-7 & Ready, Set, Ship & SEO + Open Graph + CDN + rate limiting + cookie consent + privacy page. Break case: mixed content warning. & Site production-ready. HTTPS, SEO, privacy compliance. Bisa debug mixed content.\\
-8 & Full Circle & Solo free build. PromptAudit graduation review. Community showcase. Scale handoff. & Fitur baru dibangun \& dideploy sendiri. Bergabung network owner. Paham escalation path.\\
+1 & Introduction to Vibe Coding Responsibly
+& \begin{itemize}[nosep,leftmargin=*]
+\item Perbandingan Campus vs Praktek vs Vibe Code
+\item Sejarah perkembangan software development
+\item OpenCode + PromptAudit setup
+\item Zero-level vanilla stack (HTML/CSS/JS, JS backend, SQLite)
+\item Deploy ke Netlify via GitHub
+\end{itemize}
+& Website vanilla pertama live di Netlify. Paham perbedaan 3 jalur karir. PromptAudit aktif.\\
+
+2 & The Prompt Architect
+& \begin{itemize}[nosep,leftmargin=*]
+\item Sejarah AI: expert systems ke LLM
+\item Context management (MCPs, Skills, Markdowns)
+\item SDLC \& Blackbox Development
+\item Clean code, clean repo (hapus debris, dedup)
+\item Fork 2 project dari 1 repo, deploy keduanya
+\end{itemize}
+& 2 project terdeploy dari 1 repo. Paham cara kelola konteks AI. Kode bersih tanpa debris.\\
+
+3 & Do Not Reinvent The Wheels
+& \begin{itemize}[nosep,leftmargin=*]
+\item Kenapa framework dan library ada
+\item Plus minus berbagai bahasa pemrograman
+\item Vite + TailwindCSS + Express + MongoDB
+\item Selesaikan beginner dev track
+\item Deploy app berbasis framework
+\end{itemize}
+& Website framework pertama live. Paham kapan pakai framework vs vanilla.\\
+
+4 & Trust, But Verify
+& \begin{itemize}[nosep,leftmargin=*]
+\item pino structured logging
+\item Break case: buat bug sengaja, trace dan fix
+\item Analytics: Plausible/GA
+\item Business case: simulasi visitor
+\item Log viewer + analytics dashboard
+\end{itemize}
+& Logging \& analytics terpasang. Bisa jawab: "apa yang terjadi?" (logs) + "apa yang pelanggan lakukan?" (analytics).\\
+
+5 & From Click to Cash
+& \begin{itemize}[nosep,leftmargin=*]
+\item Booking form + date picker + service selector
+\item Payment gateway: Midtrans/Stripe (test mode)
+\item Webhook + email receipt via Resend
+\item Break case: webhook failure
+\item Conversion event tracking
+\end{itemize}
+& Booking + payment end-to-end bekerja. Bisa debug webhook failure dari logs.\\
+
+6 & Know Thy Customer
+& \begin{itemize}[nosep,leftmargin=*]
+\item JWT authentication (register, login, logout)
+\item Admin dashboard + role-based access
+\item Email notifications on status change
+\item Cookie consent + privacy compliance
+\item Break case: role leak
+\end{itemize}
+& Login + dashboard + role-based access bekerja. Bisa debug auth error dari logs.\\
+
+7 & Ready, Set, Ship
+& \begin{itemize}[nosep,leftmargin=*]
+\item SEO meta tags + Open Graph + sitemap
+\item Image optimization + CDN + Lighthouse audit
+\item Rate limiting + input validation + CORS
+\item Cookie consent banner + privacy page
+\item Break case: mixed content warning
+\end{itemize}
+& Site production-ready. HTTPS, SEO, privacy compliance. Bisa debug mixed content.\\
+
+8 & Full Circle
+& \begin{itemize}[nosep,leftmargin=*]
+\item Solo free build (mentor nonton diam)
+\item PromptAudit graduation review
+\item Community showcase
+\item Scale handoff conversation
+\end{itemize}
+& Fitur baru dibangun \& dideploy sendiri. Bergabung network owner. Paham escalation path.\\
 \bottomrule
 \end{tabularx}
 
