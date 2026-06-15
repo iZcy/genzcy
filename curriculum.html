@@ -71,7 +71,7 @@ tr:hover td{background:var(--card)}
 
 <div class="lg" style="margin-top:6px;font-size:11px;color:var(--td)">
 <span>🧰 <strong style="color:var(--accent2)">Stack:</strong></span>
-<span>Vite (Frontend)</span><span>·</span><span>Express (Backend)</span><span>·</span><span>Prisma + SQLite (Database)</span><span>·</span><span>Resend (Email)</span><span>·</span><span>JWT (Auth)</span><span>·</span><span>Midtrans/Stripe (Payments)</span><span>·</span><span>Nginx/Caddy (Reverse Proxy)</span>
+<span>Vite (Frontend)</span><span>·</span><span>Express (Backend)</span><span>·</span><span>MongoDB + Mongoose (Database)</span><span>·</span><span>Resend (Email)</span><span>·</span><span>JWT (Auth)</span><span>·</span><span>Midtrans/Stripe (Payments)</span><span>·</span><span>Nginx/Caddy (Reverse Proxy)</span>
 </div>
 <div class="tw"><table>
 <colgroup>
@@ -121,9 +121,9 @@ tr:hover td{background:var(--card)}
 <td><span class="col-cp">#3 Frontend vs Backend</span><br><span class="col-cp">#4 Data Modeling</span></td>
 <td class="ly">Content + SEO</td>
 <td><span class="tag tc">C</span> Service pages, FAQ, testimonials — content that builds trust.<br><span class="tag ts">S</span> View page source — see your meta tags.<br><span class="tag tb">B</span> <span class="h">"Add services page, FAQ accordion, testimonial cards. Add SEO meta tags and Open Graph."</span><br><span class="e">✕ Social preview broken, no meta tags</span></td>
-<td><span class="tag tc">C</span> Database = structured storage. Tables = file drawers.<br><span class="tag ts">S</span> Open DB browser — see the table structure.<br><span class="tag tb">B</span> <span class="h">"Set up Prisma ORM with SQLite. Create a Services model: name, description, price, image. Seed sample data."</span><br><span class="e">✕ DB connection refused</span></td>
+<td><span class="tag tc">C</span> Database = structured storage. Collections = folders, documents = files.<br><span class="tag ts">S</span> Open MongoDB Compass — see the database structure.<br><span class="tag tb">B</span> <span class="h">"Connect MongoDB (Mongoose). Create a Service model: name, description, price, image. Seed sample documents."</span><br><span class="e">✕ DB connection refused</span></td>
 <td><span class="tag tc">C</span> SEO = meta tags, sitemap, Google Search Console.<br><span class="tag ts">S</span> Submit sitemap to Google.<br><span class="tag tb">B</span> <span class="h">"Generate sitemap.xml. Add Google Search Console meta tag."</span><br><span class="e">✕ .env missing, site not indexed</span></td>
-<td class="out">Services table in DB. SEO + Open Graph live. FAQ works. Google Search Console connected.</td>
+<td class="out">Services collection in MongoDB. SEO + Open Graph live. FAQ works. Google Search Console connected.</td>
 </tr>
 
 <!-- S4: Live Data -->
@@ -134,9 +134,9 @@ tr:hover td{background:var(--card)}
 <td><span class="col-cp">#5 CRUD</span><br><span class="col-cp">#6 API (REST)</span></td>
 <td class="ly">Live Data</td>
 <td><span class="tag tc">C</span> Dynamic pages = content comes from database, not hardcoded.<br><span class="tag ts">S</span> See data from DB appear on the page.<br><span class="tag tb">B</span> <span class="h">"Display my services from the database on the services page automatically"</span><br><span class="e">✕ Data not showing, wrong field name</span></td>
-<td><span class="tag tc">C</span> CRUD = Create Read Update Delete. API = waiter between FE and DB.<br><span class="tag ts">S</span> See raw API response (JSON) in browser.<br><span class="tag tb">B</span> <span class="h">"Build Express CRUD routes for services: GET/POST/PUT/DELETE. Add admin page that uses these endpoints."</span><br><span class="e">✕ 404, wrong endpoint, CORS</span></td>
+<td><span class="tag tc">C</span> CRUD = Create Read Update Delete. API = waiter between FE and DB.<br><span class="tag ts">S</span> See raw API response (JSON) in browser.<br><span class="tag tb">B</span> <span class="h">"Build Express CRUD routes for services with Mongoose: GET/POST/PUT/DELETE. Admin page uses these endpoints."</span><br><span class="e">✕ 404, wrong endpoint, CORS</span></td>
 <td><span class="tag tc">C</span> Admin area = protected space. Who can edit data?<br><span class="tag ts">S</span> See that anyone can access admin (no auth yet).<br><span class="tag tb">B</span> <span class="h">"Add password protection to the admin page. Move API config to .env."</span><br><span class="e">✕ Anyone can edit — security gap realized</span></td>
-<td class="out">Site shows live DB data. Admin area with password. API endpoints working. Security awareness.</td>
+<td class="out">Site shows live MongoDB data. Admin area with password. API endpoints working. Security awareness.</td>
 </tr>
 
 <!-- S5: Bookings + Maps + Payments -->
@@ -175,7 +175,7 @@ tr:hover td{background:var(--card)}
 <td><span class="col-cp">#11 Deployment</span><br><span class="col-cp">#12 Monitoring</span></td>
 <td class="ly">Deploy + Analytics</td>
 <td><span class="tag tc">C</span> Loading states, 404 page, image optimization.<br><span class="tag ts">S</span> Visit your live site on your REAL domain.<br><span class="tag tb">B</span> <span class="h">"Add loading states, custom 404 page in Vite. Optimize images. Add Plausible/GA analytics."</span><br><span class="e">✕ Analytics script blocked</span></td>
-<td><span class="tag tc">C</span> Production config = different from dev. Error logging in production.<br><span class="tag ts">S</span> See production logs — whats happening right now.<br><span class="tag tb">B</span> <span class="h">"Deploy Express server to production. Set up error logging (Morgan/Sentry). Enable HTTPS via reverse proxy."</span><br><span class="e">✕ Deploy broke something — rollback</span></td>
+<td><span class="tag tc">C</span> Production config = different from dev. Error logging in production.<br><span class="tag ts">S</span> See production logs — whats happening right now.<br><span class="tag tb">B</span> <span class="h">"Deploy Express server to production. Add pino logger for structured logs. Enable HTTPS via reverse proxy."</span><br><span class="e">✕ Deploy broke something — rollback</span></td>
 <td><span class="tag tc">C</span> 🔒 HTTPS = lock. CDN = speed. Rollback = safety net.<br><span class="tag ts">S</span> Check green lock in browser. See first real visitor in analytics.<br><span class="tag tb">B</span> <span class="h">"Configure Nginx/Caddy as reverse proxy with SSL. Set up CDN for static assets. Test rollback."</span><br><span class="e">✕ Mixed content warning, slow page load</span></td>
 <td class="out">Live HTTPS site on real domain. Analytics tracking real visitors. Fast with CDN. Rollback tested.</td>
 </tr>
