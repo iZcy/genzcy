@@ -8,6 +8,7 @@
 
 | Key points to present | Owner should walk away knowing |
 |---|---|
+| **How development changed:** Old way = write every line by hand, deterministic, months to build. New way (vibe coding) = describe what you want in plain language, AI generates the code, hours to build. | AI is **probabilistic** — it predicts, doesn't "think." Same prompt can give different results. You MUST test everything and read the generated code. You don't learn to code; you learn to **architect and direct**. |
 | Frontend = what users see (HTML/CSS) | They built HTML, saw it render in browser |
 | Backend = server that delivers pages (Express) | They started a server, saw it respond to requests |
 | DevOps = git + deploy + monitor (Git + GitHub) | They ran `git init`, committed, pushed to GitHub |
