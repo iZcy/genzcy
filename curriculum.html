@@ -68,6 +68,11 @@ tr:hover td{background:var(--card)}
 <span>■ <span style="color:var(--red)">✕</span> Errors they learn to fix</span>
 </div>
 
+
+<div class="lg" style="margin-top:6px;font-size:11px;color:var(--td)">
+<span>🧰 <strong style="color:var(--accent2)">Stack:</strong></span>
+<span>Vite (Frontend)</span><span>·</span><span>Express (Backend)</span><span>·</span><span>Prisma + SQLite (Database)</span><span>·</span><span>Nodemailer (Email)</span><span>·</span><span>JWT (Auth)</span><span>·</span><span>Midtrans/Stripe (Payments)</span><span>·</span><span>Nginx/Caddy (Reverse Proxy)</span>
+</div>
 <div class="tw"><table>
 <colgroup>
 <col style="width:36px"><col style="width:24px"><col style="width:22px">
@@ -88,8 +93,8 @@ tr:hover td{background:var(--card)}
 <td><span class="col-cp">Analyze</span></td>
 <td><span class="col-cp">#1 Client-Server</span><br><span class="col-cp">#2 HTTP Lifecycle</span></td>
 <td class="ly">Full Stack in 1 Page</td>
-<td><span class="tag tc">C</span> What is Frontend? = everything users see and click.<br><span class="tag ts">S</span> Open any site, see its structure (Chrome DevTools).<br><span class="tag tb">B</span> <span class="h">"Build my first page: business name, tagline, hero image. Make it look decent."</span><br><span class="e">✕ Missing image, broken layout</span></td>
-<td><span class="tag tc">C</span> What is Backend? = server that delivers pages. "Your browser asks, server responds."<br><span class="tag ts">S</span> See the server start in terminal. See request come in.<br><span class="tag tb">B</span> <span class="h">"Set up a local server that shows my page"</span><br><span class="e">✕ "Command not found", port in use</span></td>
+<td><span class="tag tc">C</span> What is Frontend? = everything users see and click.<br><span class="tag ts">S</span> Open any site, see its structure (Chrome DevTools).<br><span class="tag tb">B</span> <span class="h">"Scaffold a Vite project. Build my homepage: business name, tagline, hero section. Make it look decent."</span><br><span class="e">✕ Missing image, broken layout</span></td>
+<td><span class="tag tc">C</span> What is Backend? = server that delivers pages. "Your browser asks, server responds."<br><span class="tag ts">S</span> See the server start in terminal. See request come in.<br><span class="tag tb">B</span> <span class="h">"Set up an Express server that serves my Vite-built page"</span><br><span class="e">✕ "Command not found", port in use</span></td>
 <td><span class="tag tc">C</span> What is DevOps? = git + deploy + monitor. Git = save points.<br><span class="tag ts">S</span> See project files in VS Code. Run <span class="h">git init</span>.<br><span class="tag tb">B</span> <span class="h">"Init git, commit my page, push to GitHub"</span><br><span class="e">✕ First merge conflict</span></td>
 <td class="out">GitHub repo live. First page renders. Owner can explain FE/BE/DO by DOING them.</td>
 </tr>
@@ -101,8 +106,8 @@ tr:hover td{background:var(--card)}
 <td><span class="col-cp">Plan</span></td>
 <td><span class="col-cp">#8 State Mgmt</span><br><span class="col-cp">#9 Error Handling</span></td>
 <td class="ly">Brand + Contact</td>
-<td><span class="tag tc">C</span> CSS = brand colors, fonts, layout. Mobile-first.<br><span class="tag ts">S</span> Inspect any site's colors/fonts (DevTools).<br><span class="tag tb">B</span> <span class="h">"Style my site with my brand colors, logo, fonts. Add pages: About, Services, Contact."</span><br><span class="e">✕ CSS breaks on mobile, specificity</span></td>
-<td><span class="tag tc">C</span> Form data needs a server endpoint to receive it.<br><span class="tag ts">S</span> See form submission hit the server.<br><span class="tag tb">B</span> <span class="h">"Add a contact form that emails me when someone submits"</span><br><span class="e">✕ Form submitted but nothing happened</span></td>
+<td><span class="tag tc">C</span> CSS = brand colors, fonts, layout. Mobile-first.<br><span class="tag ts">S</span> Inspect any site's colors/fonts (DevTools).<br><span class="tag tb">B</span> <span class="h">"Style with my brand colors, logo, fonts. Add routes: /about, /services, /contact. Use Vite dev mode."</span><br><span class="e">✕ CSS breaks on mobile, specificity</span></td>
+<td><span class="tag tc">C</span> Form data needs a server endpoint to receive it.<br><span class="tag ts">S</span> See form submission hit the server.<br><span class="tag tb">B</span> <span class="h">"Add Express POST route for contact form. Use Nodemailer to email me the submission."</span><br><span class="e">✕ Form submitted but nothing happened</span></td>
 <td><span class="tag tc">C</span> Branches = safe experiments. .gitignore.<br><span class="tag ts">S</span> GitHub — see branches, open a PR.<br><span class="tag tb">B</span> <span class="h">"Create a styling branch, merge it. Add .gitignore for env files."</span><br><span class="e">✕ Uncommitted work lost</span></td>
 <td class="out">Branded multi-page site. Contact form sends email. Uses branches. .gitignore active.</td>
 </tr>
@@ -116,7 +121,7 @@ tr:hover td{background:var(--card)}
 <td><span class="col-cp">#3 Frontend vs Backend</span><br><span class="col-cp">#4 Data Modeling</span></td>
 <td class="ly">Content + SEO</td>
 <td><span class="tag tc">C</span> Service pages, FAQ, testimonials — content that builds trust.<br><span class="tag ts">S</span> View page source — see your meta tags.<br><span class="tag tb">B</span> <span class="h">"Add services page, FAQ accordion, testimonial cards. Add SEO meta tags and Open Graph."</span><br><span class="e">✕ Social preview broken, no meta tags</span></td>
-<td><span class="tag tc">C</span> Database = structured storage. Tables = file drawers.<br><span class="tag ts">S</span> Open DB browser — see the table structure.<br><span class="tag tb">B</span> <span class="h">"Create a Services table with name, description, price, image. Add sample data."</span><br><span class="e">✕ DB connection refused</span></td>
+<td><span class="tag tc">C</span> Database = structured storage. Tables = file drawers.<br><span class="tag ts">S</span> Open DB browser — see the table structure.<br><span class="tag tb">B</span> <span class="h">"Set up Prisma ORM with SQLite. Create a Services model: name, description, price, image. Seed sample data."</span><br><span class="e">✕ DB connection refused</span></td>
 <td><span class="tag tc">C</span> SEO = meta tags, sitemap, Google Search Console.<br><span class="tag ts">S</span> Submit sitemap to Google.<br><span class="tag tb">B</span> <span class="h">"Generate sitemap.xml. Add Google Search Console meta tag."</span><br><span class="e">✕ .env missing, site not indexed</span></td>
 <td class="out">Services table in DB. SEO + Open Graph live. FAQ works. Google Search Console connected.</td>
 </tr>
@@ -129,7 +134,7 @@ tr:hover td{background:var(--card)}
 <td><span class="col-cp">#5 CRUD</span><br><span class="col-cp">#6 API (REST)</span></td>
 <td class="ly">Live Data</td>
 <td><span class="tag tc">C</span> Dynamic pages = content comes from database, not hardcoded.<br><span class="tag ts">S</span> See data from DB appear on the page.<br><span class="tag tb">B</span> <span class="h">"Display my services from the database on the services page automatically"</span><br><span class="e">✕ Data not showing, wrong field name</span></td>
-<td><span class="tag tc">C</span> CRUD = Create Read Update Delete. API = waiter between FE and DB.<br><span class="tag ts">S</span> See raw API response (JSON) in browser.<br><span class="tag tb">B</span> <span class="h">"Build CRUD API for services. Add a simple admin page to add/edit/delete."</span><br><span class="e">✕ 404, wrong endpoint, CORS</span></td>
+<td><span class="tag tc">C</span> CRUD = Create Read Update Delete. API = waiter between FE and DB.<br><span class="tag ts">S</span> See raw API response (JSON) in browser.<br><span class="tag tb">B</span> <span class="h">"Build Express CRUD routes for services: GET/POST/PUT/DELETE. Add admin page that uses these endpoints."</span><br><span class="e">✕ 404, wrong endpoint, CORS</span></td>
 <td><span class="tag tc">C</span> Admin area = protected space. Who can edit data?<br><span class="tag ts">S</span> See that anyone can access admin (no auth yet).<br><span class="tag tb">B</span> <span class="h">"Add password protection to the admin page. Move API config to .env."</span><br><span class="e">✕ Anyone can edit — security gap realized</span></td>
 <td class="out">Site shows live DB data. Admin area with password. API endpoints working. Security awareness.</td>
 </tr>
@@ -143,8 +148,8 @@ tr:hover td{background:var(--card)}
 <td><span class="col-cp">#7 Auth</span><br><span class="col-cp">#6 API (cont.)</span></td>
 <td class="ly">Bookings + Payments</td>
 <td><span class="tag tc">C</span> Booking form = date picker + time slot + service selector.<br><span class="tag ts">S</span> Test the booking flow as a customer.<br><span class="tag tb">B</span> <span class="h">"Build a booking form: pick a service, choose date/time, enter name and phone"</span><br><span class="e">✕ Date format wrong, time conflict</span></td>
-<td><span class="tag tc">C</span> Payment gateway (Midtrans/Xendit/Stripe). Booking logic — check availability.<br><span class="tag ts">S</span> See payment flow in test mode.<br><span class="tag tb">B</span> <span class="h">"Connect booking to payment. Add Google Maps embed."</span><br><span class="e">✕ Payment fails, webhook not received</span></td>
-<td><span class="tag tc">C</span> Webhooks = payment sends confirmation back. Never log card details.<br><span class="tag ts">S</span> See webhook payload in logs.<br><span class="tag tb">B</span> <span class="h">"Add webhook to confirm booking after payment. Audit logs for sensitive data."</span><br><span class="e">✕ Sensitive data in logs, signature mismatch</span></td>
+<td><span class="tag tc">C</span> Payment gateway (Midtrans/Xendit/Stripe). Booking logic — check availability.<br><span class="tag ts">S</span> See payment flow in test mode.<br><span class="tag tb">B</span> <span class="h">"Integrate Midtrans/Xendit payment. Add Google Maps API embed. Express handles booking + payment webhooks."</span><br><span class="e">✕ Payment fails, webhook not received</span></td>
+<td><span class="tag tc">C</span> Webhooks = payment sends confirmation back. Never log card details.<br><span class="tag ts">S</span> See webhook payload in logs.<br><span class="tag tb">B</span> <span class="h">"Add Express webhook endpoint to confirm booking after payment. Audit server logs for sensitive data."</span><br><span class="e">✕ Sensitive data in logs, signature mismatch</span></td>
 <td class="out">Booking + payment flow end-to-end in test mode. Maps shows location. No card data stored.</td>
 </tr>
 
@@ -155,8 +160,8 @@ tr:hover td{background:var(--card)}
 <td><span class="col-cp">Plan</span></td>
 <td><span class="col-cp">#7 Auth (cont.)</span><br><span class="col-cp">#10 Env &amp; Secrets</span></td>
 <td class="ly">Logins + Dashboard + Privacy</td>
-<td><span class="tag tc">C</span> Login page UI. Dashboard displays bookings, customers.<br><span class="tag ts">S</span> See auth token in browser storage.<br><span class="tag tb">B</span> <span class="h">"Add customer login. Build a dashboard showing bookings with status (pending/confirmed)"</span><br><span class="e">✕ Login loop, token expired</span></td>
-<td><span class="tag tc">C</span> Auth = passwords, tokens, sessions. Role-based access (admin vs customer).<br><span class="tag ts">S</span> See JWT/cookies in Application tab.<br><span class="tag tb">B</span> <span class="h">"Create user registration + login system. Admin sees all bookings. Customer sees only theirs."</span><br><span class="e">✕ 401/403 unauthorized</span></td>
+<td><span class="tag tc">C</span> Login page UI. Dashboard displays bookings, customers.<br><span class="tag ts">S</span> See auth token in browser storage.<br><span class="tag tb">B</span> <span class="h">"Add login page. Build dashboard UI in Vite showing bookings grouped by status."</span><br><span class="e">✕ Login loop, token expired</span></td>
+<td><span class="tag tc">C</span> Auth = passwords, tokens, sessions. Role-based access (admin vs customer).<br><span class="tag ts">S</span> See JWT/cookies in Application tab.<br><span class="tag tb">B</span> <span class="h">"Create user auth in Express with JWT. Admin sees all bookings, customer sees only theirs."</span><br><span class="e">✕ 401/403 unauthorized</span></td>
 <td><span class="tag tc">C</span> Cookie consent (GDPR/Privacy). Secrets rotation. Full audit.<br><span class="tag ts">S</span> See what data you're collecting from users.<br><span class="tag tb">B</span> <span class="h">"Add cookie consent banner. Audit ALL secrets in .env. Check no API keys leaked."</span><br><span class="e">✕ Secret leaked in client code</span></td>
 <td class="out">Customer login + admin dashboard. Role-based access. Cookie consent active. Full secrets audit done.</td>
 </tr>
@@ -169,9 +174,9 @@ tr:hover td{background:var(--card)}
 <td><span class="col-cp">Plan</span></td>
 <td><span class="col-cp">#11 Deployment</span><br><span class="col-cp">#12 Monitoring</span></td>
 <td class="ly">Deploy + Analytics</td>
-<td><span class="tag tc">C</span> Loading states, 404 page, image optimization.<br><span class="tag ts">S</span> Visit your live site on your REAL domain.<br><span class="tag tb">B</span> <span class="h">"Add loading spinner, custom 404 page, optimize images. Add analytics tracking."</span><br><span class="e">✕ Analytics script blocked</span></td>
-<td><span class="tag tc">C</span> Production config = different from dev. Error logging in production.<br><span class="tag ts">S</span> See production logs — whats happening right now.<br><span class="tag tb">B</span> <span class="h">"Deploy to production with HTTPS. Set up error logging on the server."</span><br><span class="e">✕ Deploy broke something — rollback</span></td>
-<td><span class="tag tc">C</span> 🔒 HTTPS = lock. CDN = speed. Rollback = safety net.<br><span class="tag ts">S</span> Check green lock in browser. See first real visitor in analytics.<br><span class="tag tb">B</span> <span class="h">"Enable SSL/HTTPS. Set up a CDN for images. Verify rollback works."</span><br><span class="e">✕ Mixed content warning, slow page load</span></td>
+<td><span class="tag tc">C</span> Loading states, 404 page, image optimization.<br><span class="tag ts">S</span> Visit your live site on your REAL domain.<br><span class="tag tb">B</span> <span class="h">"Add loading states, custom 404 page in Vite. Optimize images. Add Plausible/GA analytics."</span><br><span class="e">✕ Analytics script blocked</span></td>
+<td><span class="tag tc">C</span> Production config = different from dev. Error logging in production.<br><span class="tag ts">S</span> See production logs — whats happening right now.<br><span class="tag tb">B</span> <span class="h">"Deploy Express server to production. Set up error logging (Morgan/Sentry). Enable HTTPS via reverse proxy."</span><br><span class="e">✕ Deploy broke something — rollback</span></td>
+<td><span class="tag tc">C</span> 🔒 HTTPS = lock. CDN = speed. Rollback = safety net.<br><span class="tag ts">S</span> Check green lock in browser. See first real visitor in analytics.<br><span class="tag tb">B</span> <span class="h">"Configure Nginx/Caddy as reverse proxy with SSL. Set up CDN for static assets. Test rollback."</span><br><span class="e">✕ Mixed content warning, slow page load</span></td>
 <td class="out">Live HTTPS site on real domain. Analytics tracking real visitors. Fast with CDN. Rollback tested.</td>
 </tr>
 
