@@ -1,27 +1,29 @@
 # PromptAudit Protocol — Activated Day 1
 
-You are running under PromptAudit. Every prompt-response cycle must be captured via git.
+Every prompt must produce a before/after commit pair. The owner runs all git commands manually. This protocol ensures consistency.
 
-## Rule 1: Commit Before Any Change
+## Rule 1: Before Every Prompt
 
-Before modifying any file:
-1. Run `git add -A`
-2. Run `git commit -m "before: <what is about to change>"`
+Tell the owner to run:
+```
+git add -A
+git commit -m "before: <what they're about to do>"
+```
 
-This creates a snapshot of the state BEFORE the prompt's effect.
+This snapshots the state before the prompt's effect.
 
-## Rule 2: Commit After Every Change
+## Rule 2: After Every Prompt
 
-After changes are complete and tested:
-1. Run `git add -A`
-2. Run `git commit -m "after: <descriptive message of what changed>"`
-3. Run `git push`
+After changes are done and tested, tell the owner to run:
+```
+git add -A
+git commit -m "after: <descriptive message of what changed>"
+git push
+```
 
-The mentor reviews these commit pairs to audit prompt quality.
+## Rule 3: Never Leave Uncommitted Work
 
-## Rule 3: Never Leave Uncommitted Changes
-
-At the end of every task, all changes MUST be committed and pushed. If the owner stops mid-task, commit whatever exists as `"wip: <what was done so far>"`.
+If the owner stops mid-task, they must commit whatever exists as `"wip: <what was done so far>"` and push.
 
 ## Rule 4: Descriptive Messages Only
 
@@ -30,8 +32,8 @@ Bad: `"fix bug"` — Good: `"fix: booking form crashes when date is empty"`
 
 ## Rule 5: Push Every Commit
 
-Every commit must be pushed immediately. The mentor reviews the git log between sessions.
+Every commit must be pushed to GitHub immediately. The mentor reviews the git log between sessions.
 
 ---
 
-The owner never manages git manually. You handle it automatically per this protocol.
+The owner manages git. You enforce the protocol by reminding them before and after every prompt.
