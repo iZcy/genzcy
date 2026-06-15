@@ -4,67 +4,52 @@
 \usepackage{times}
 \usepackage{booktabs}
 \usepackage{tabularx}
-\usepackage{xcolor}
-\usepackage{hyperref}
 \usepackage{parskip}
 
-\definecolor{darkblue}{RGB}{26,54,93}
-\definecolor{accentblue}{RGB}{43,108,176}
-\definecolor{lightgray}{gray}{0.55}
-
-\hypersetup{colorlinks=true,linkcolor=accentblue,urlcolor=accentblue}
-
-\renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{5pt}
 
 \begin{document}
 
 % Title
-{\LARGE\bfseries\color{darkblue} GenZCY -- Build With Vibe\par}
+{\LARGE\bfseries GenZCY -- Build With Vibe\par}
 \vspace{2pt}
-{\small\color{lightgray} 4 weeks $\mid$ 8 sessions $\times$ 2h $\mid$ 1-on-1 mentorship\par}
+{\small 4 weeks $\mid$ 8 sessions $\times$ 2h $\mid$ 1-on-1 mentorship\par}
 \vspace{6pt}
 
-\noindent{\small\color{lightgray} A private program for business owners. You don't learn to code. You learn to architect websites and direct AI to build them. Every session ships real code.}
+\noindent{\small A private program for business owners. You don't learn to code. You learn to architect websites and direct AI to build them. Every session ships real code.}
 
 \vspace{4pt}
-\noindent{\small\bfseries\color{darkblue} Stack:} {\small Vite + TailwindCSS (FE) $\mid$ Express JS (BE) $\mid$ MongoDB (DB) $\mid$ Resend (Email) $\mid$ JWT (Auth) $\mid$ Midtrans/Stripe (Payments)}
+\noindent{\small\bfseries Stack:} {\small Vite + TailwindCSS (FE) $\mid$ Express JS (BE) $\mid$ MongoDB (DB) $\mid$ Resend (Email) $\mid$ JWT (Auth) $\mid$ Midtrans/Stripe (Payments)}
 
 \vspace{2pt}
-\noindent{\small\bfseries\color{darkblue} Tariff:} {\small\bfseries Rp100.000/hour} {\small ($\times$ 16 jam = Rp1.600.000 total)}
+\noindent{\small\bfseries Tariff:} {\small\bfseries Rp100.000/hour} {\small ($\times$ 16 jam = Rp1.600.000 total)}
 
-\vspace{8pt}
+\vspace{10pt}
 
 % Session table
 \noindent
-\begin{tabularx}{\textwidth}{c >{\raggedright\arraybackslash}p{3.8cm} >{\raggedright\arraybackslash}X c}
+\begin{tabularx}{\textwidth}{c p{3.5cm} >{\raggedright\arraybackslash}X c}
 \toprule
-\color{accentblue}\textbf{Sesi} & \color{accentblue}\textbf{Judul} & \color{accentblue}\textbf{Isi} & \color{accentblue}\textbf{SDLC}\\
+\textbf{Sesi} & \textbf{Judul} & \textbf{Points} & \textbf{SDLC}\\
 \midrule
 1 & Introduction to Vibe Coding Responsibly & Perbandingan Campus vs Praktek vs Vibe Code. Sejarah development. OpenCode + PromptAudit. Zero-level vanilla (HTML/CSS/JS, JS backend, SQLite). Deploy ke Netlify via GitHub. & Analyze + Plan\\
-\addlinespace
 2 & The Prompt Architect & Sejarah AI: expert systems ke LLM. Manajemen konteks (MCPs, Skills, Markdowns). SDLC \& Blackbox Dev. Clean code, clean repo. Fork 2 project, deploy keduanya. & Plan + Develop\\
-\addlinespace
 3 & Do Not Reinvent The Wheels & Kenapa framework ada. Vite + TailwindCSS + Express + MongoDB. Selesaikan beginner track. Deploy app berbasis framework. & Plan + Develop\\
-\addlinespace
 4 & Trust, But Verify & pino structured logging. Break case: bug sengaja, trace dan fix. Analytics (Plausible/GA). Business case: simulasi visitor. Log viewer + analytics dashboard. & Develop + Test\\
-\addlinespace
 5 & From Click to Cash & Booking form + payment gateway (Midtrans/Stripe). Webhook + email receipt. Break case: webhook failure. & Develop + Test + Deploy\\
-\addlinespace
 6 & Know Thy Customer & JWT auth + admin dashboard + roles. Email notifications. Break case: role leak. & Develop + Test + Security\\
-\addlinespace
 7 & Ready, Set, Ship & SEO + Open Graph + CDN + rate limiting + cookie consent + privacy page. Break case: mixed content warning. & Deploy + Maintain\\
-\addlinespace
 8 & Full Circle & Solo free build. PromptAudit graduation review. Community showcase. Scale handoff. & Maintain + Iterate\\
 \bottomrule
 \end{tabularx}
 
-\vspace{10pt}
+\vspace{12pt}
 
-% Footer info
-\noindent{\small\bfseries\color{darkblue} Total: 8 sesi $\times$ 2 jam = 16 jam $\mid$ Rp1.600.000}
+% Footer
+\noindent{\small\bfseries Total: 8 sesi $\times$ 2 jam = 16 jam $\mid$ Rp1.600.000}
 
 \vspace{3pt}
-\noindent{\small\color{lightgray} Setiap sesi: Konsep $\rightarrow$ BUILD via prompt $\rightarrow$ BACA kode yang digenerate $\rightarrow$ Error tracing $\rightarrow$ Commit \& Push. PromptAudit aktif dari Hari 1. Setelah lulus: bergabung dengan network owner + jalur handoff scale.}
+\noindent{\small Setiap sesi: Konsep $\rightarrow$ BUILD via prompt $\rightarrow$ BACA kode yang digenerate $\rightarrow$ Error tracing $\rightarrow$ Commit \& Push. PromptAudit aktif dari Hari 1. Setelah lulus: bergabung dengan network owner + jalur handoff scale.}
 
 \end{document}
