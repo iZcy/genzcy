@@ -29,7 +29,7 @@
 
 \vspace{4pt}
 \noindent{\footnotesize\bfseries Mentor:} {\footnotesize Yitzhak Edmund Tio Manalu -- CEO of ArachnoVa}\\
-{\footnotesize\bfseries Web:} {\footnotesize \url{https://www.arachnova.id} $\mid$ \url{https://www.instagram.com/arachnova.id}}
+{\footnotesize\bfseries Sites:} {\footnotesize \url{https://www.arachnova.id} $\mid$ \url{https://www.instagram.com/arachnova.id}}
 
 \vspace{3pt}
 \noindent{\footnotesize\bfseries Stack:} {\footnotesize Vite + TailwindCSS (FE) $\mid$ Express JS (BE) $\mid$ MongoDB (DB) $\mid$ Resend (Email) $\mid$ JWT (Auth) $\mid$ Midtrans (Payments)}\\
@@ -47,7 +47,7 @@
 1 & Introduction to Vibe Coding
 & \begin{itemize}[nosep,leftmargin=*]
 \item Perbandingan Campus vs Proyek vs Vibe Code
-\item Sejarah perkembangan software development
+\item Before \& After Vibe Coding
 \item OpenCode + tooling setup
 \item Zero-level vanilla stack (HTML/CSS/JS, JS backend, SQLite)
 \item Deploy ke Netlify via GitHub
@@ -56,13 +56,13 @@
 
 2 & The Prompt Architect
 & \begin{itemize}[nosep,leftmargin=*]
-\item Sejarah AI: expert systems ke LLM
+\item Konsep AI: expert systems ke LLM
 \item Context management (MCPs, Skills, Markdowns)
 \item SDLC \& Blackbox Development
 \item Clean code, clean repo (hapus debris, dedup)
 \item Fork 2 project dari 1 repo, deploy keduanya
 \end{itemize}
-& \textbf{2 project terdeploy dari 1 repo (Netlify).}\\
+& \textbf{2 project terdeploy dari 1 repo.}\\
 
 3 & Do Not Reinvent the Wheel
 & \begin{itemize}[nosep,leftmargin=*]
@@ -70,16 +70,17 @@
 \item Plus minus berbagai bahasa pemrograman
 \item Vite + TailwindCSS + Express + MongoDB
 \item Selesaikan beginner dev track
-\item Deploy app berbasis framework
+\item Deploy app berbasis framework (Railway/Vercel)
 \end{itemize}
 & \textbf{Website framework pertama live (Vite+Tailwind+Express+MongoDB).}\\
 
 4 & The Truth Is in the Logs
 & \begin{itemize}[nosep,leftmargin=*]
-\item pino structured logging (setiap request tercatat)
-\item Plausible analytics — tau berapa pengunjung, dari mana, klik apa
+\item Cara log di frontend (console, network)
+\item Cara log di backend (server log per request)
+\item Cara log di server (error log, access log)
 \item Business case: simulasikan pengunjung, lihat data real-time
-\item Log viewer + Plausible dashboard di admin
+\item Log viewer sederhana di admin area
 \end{itemize}
 & \textbf{Log viewer + analytics dashboard live.}\\
 
@@ -97,7 +98,6 @@
 \item JWT authentication (register, login, logout)
 \item Admin dashboard + role-based access
 \item Email notifications on status change
-\item Cookie consent + privacy compliance
 \end{itemize}
 & \textbf{Admin dashboard dengan login multi-role live.}\\
 
@@ -109,11 +109,12 @@
 \item Rate limiting + input validation + CORS
 \item \textbf{Bukti SEO bekerja:} Google Rich Results Test, tanya ChatGPT/Claude tentang bisnis Anda, cek hasilnya akurat
 \end{itemize}
-& \textbf{Site production-ready: HTTPS + SEO + CDN + privacy compliance.}\\
+& \textbf{Site production-ready: SEO + CDN + security hardening.}\\
 
 8 & No More Training Wheels
 & \begin{itemize}[nosep,leftmargin=*]
-\item Solo free build (mentor nonton diam)
+\item Pilih satu fitur dari business needs list
+\item Bangun \& deploy fitur tersebut secara mandiri
 \item Community showcase — presentasi ke network owner
 \item Scale handoff conversation
 \end{itemize}
@@ -124,10 +125,16 @@
 
 \vspace{6pt}
 
+\noindent{\footnotesize\bfseries Deployment:} {\footnotesize Sesi 1-2: Netlify (static). Sesi 3-8: Railway/Vercel (full-stack).}
+
+\vspace{4pt}
+\noindent{\footnotesize\bfseries Track Levels:}\\
+{\footnotesize
+\textbf{Zero:} Paham konsep website, bisa deploy static site, tau git.\\
+\textbf{Beginner:} Paham database, API, CRUD, framework. Bisa build \& deploy full-stack app.\\
+\textbf{Junior:} Paham auth, payment, logging, SEO, security. Bisa ship production-ready.\\
+}
+
+\vspace{4pt}
 % Footer
-\noindent{\footnotesize\bfseries Total: 8 sesi $\times$ 2 jam = 16 jam $\mid$ Rp1.600.000}
-
-\vspace{2pt}
-\noindent{\footnotesize Setiap sesi: Konsep $\rightarrow$ BUILD via prompt $\rightarrow$ BACA kode $\rightarrow$ Commit \& Push.}
-
 \end{document}
