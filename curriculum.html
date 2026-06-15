@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GenZCY — Curriculum</title>
+<style>
+:root {
+  --bg: #0f0f1a; --card: #1a1a2e; --accent: #6c5ce7; --accent2: #00cec9;
+  --green: #00b894; --yellow: #fdcb6e; --red: #e17055;
+  --text: #e0e0f0; --text-dim: #8888aa; --border: #2a2a44; --bg2: #151528;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, monospace;
+  background: var(--bg); color: var(--text); line-height: 1.5;
+  padding: 20px; font-size: 12px;
+}
+.container { max-width: 1400px; margin: 0 auto; }
+h1 { font-size: 22px; margin-bottom: 2px; color: var(--accent2); }
+.subtitle { color: var(--text-dim); margin-bottom: 14px; font-size: 13px; }
+
+.workflow {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border: 1px solid var(--accent); border-radius: 10px;
+  padding: 10px 16px; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap; font-size: 11.5px;
+}
+.workflow-title { color: var(--accent2); font-weight: bold; font-size: 12px; white-space: nowrap; }
+.step { background: var(--card); padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border); white-space: nowrap; }
+.step .num { color: var(--accent); font-weight: bold; }
+.step .hl { color: var(--yellow); }
+
+.table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); }
+
+table {
+  width: 100%; border-collapse: collapse; background: var(--card);
+  min-width: 1200px; table-layout: fixed;
+}
+
+th {
+  background: #16213e; padding: 9px 8px; text-align: left;
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--accent2); border-bottom: 2px solid var(--accent);
+  position: sticky; top: 0; z-index: 2;
+}
+td {
+  padding: 8px; border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border); vertical-align: top; font-size: 11.5px;
+  line-height: 1.5;
+}
+td:last-child { border-right: none; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #1e1e38; }
+
+.col-wk { width: 36px; text-align: center; font-weight: bold; color: var(--accent2); }
+.col-ses { width: 30px; text-align: center; }
+.col-hr  { width: 26px; text-align: center; color: var(--text-dim); }
+.col-layer { width: 130px; }
+.col-fe { width: 18%; }
+.col-be { width: 18%; }
+.col-do { width: 18%; }
+.col-out { width: 120px; font-size: 11px; color: var(--accent2); }
+
+.wk { text-align: center; font-weight: bold; color: var(--accent2); font-size: 14px; }
+.ses { text-align: center; }
+.hr  { text-align: center; color: var(--text-dim); }
+.layer { font-weight: bold; color: var(--accent); }
+
+.tag { display: inline-block; font-size: 9px; padding: 1px 5px; border-radius: 3px; margin-right: 2px; font-weight: bold; }
+.tag-c { background: #2d1b69; color: #a29bfe; }
+.tag-s { background: #1b3a2d; color: var(--green); }
+.tag-b { background: #3d2b1b; color: var(--yellow); }
+
+.hl { color: var(--yellow); }
+.env { background: var(--bg); padding: 1px 4px; border-radius: 3px; font-size: 10px; color: var(--green); }
+.err { color: var(--red); font-size: 10.5px; }
+.out { font-size: 11px; color: var(--text-dim); }
+
+.gap td { height: 4px; background: transparent; border: none; padding: 0; }
+
+.legend { margin-top: 12px; display: flex; gap: 14px; flex-wrap: wrap; font-size: 10.5px; color: var(--text-dim); }
+.legend span { display: flex; align-items: center; gap: 4px; }
+.track-fe { color: var(--accent2); font-weight: bold; }
+.track-be { color: var(--yellow); font-weight: bold; }
+.track-do { color: var(--green); font-weight: bold; }
+
+.total {
+  margin-top: 10px; padding: 8px 14px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  font-size: 11.5px; color: var(--text-dim);
+  display: flex; gap: 16px; flex-wrap: wrap;
+}
+.total strong { color: var(--accent2); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>⚡ GenZCY — Build With Vibe</h1>
+<div class="subtitle">4 weeks · 8 sessions × 2h · 1-on-1 · full vibe-code with OpenCode in VS Code</div>
+
+<div class="workflow">
+  <div class="workflow-title">Every Session</div>
+  <div class="step"><span class="num">1</span> OpenCode in VS Code terminal</div>
+  <div class="step"><span class="num">2</span> Type <span class="hl">prompt</span></div>
+  <div class="step"><span class="num">3</span> OpenCode builds</div>
+  <div class="step"><span class="num">4</span> <span class="hl">READ code</span> in VS Code</div>
+  <div class="step"><span class="num">5</span> Test + observe</div>
+  <div class="step"><span class="num">6</span> Auto-commit + push → GitHub</div>
+</div>
+
+<div class="legend">
+  <span>■ <span class="tag tag-c">C</span> Concept</span>
+  <span>■ <span class="tag tag-s">S</span> SEE / inspect</span>
+  <span>■ <span class="tag tag-b">B</span> BUILD via prompt</span>
+  <span>■ <span class="err">✕</span> Error logging</span>
+  <span>■ <span class="track-fe">Frontend</span> · <span class="track-be">Backend</span> · <span class="track-do">DevOps</span></span>
+</div>
+
+<div class="table-wrap">
+<table>
+<colgroup>
+  <col class="col-wk"><col class="col-ses"><col class="col-hr"><col class="col-layer">
+  <col class="col-fe"><col class="col-be"><col class="col-do"><col class="col-out">
+</colgroup>
+<thead>
+<tr>
+  <th>Wk</th><th>#</th><th>Hr</th><th>Layer</th>
+  <th><span class="track-fe">▣ Frontend</span></th>
+  <th><span class="track-be">▣ Backend</span></th>
+  <th><span class="track-do">▣ DevOps</span></th>
+  <th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+
+<!-- ══════════════ WEEK 1 ══════════════ -->
+<tr>
+  <td class="wk" rowspan="2">W1</td>
+  <td class="ses">1</td><td class="hr">2h</td>
+  <td class="layer">Internet + Dev Env</td>
+  <td>
+    <span class="tag tag-c">C</span> HTML/CSS concept · DOM<br>
+    <span class="tag tag-s">S</span> DevTools Elements + Network waterfall<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Homepage with name, tagline, hero"</span><br>
+    <span class="err">✕ Console basics · 404s</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> Client-server · request lifecycle<br>
+    <span class="tag tag-s">S</span> Terminal output · Node process<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Run an HTTP server for my site"</span><br>
+    <span class="err">✕ "command not found" · npm fail</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> Git = save points · GitHub = cloud<br>
+    <span class="tag tag-s">S</span> <span class="env">git init</span> · <span class="env">git log</span> · VS Code tree<br>
+    <span class="tag tag-b">B</span> <span class="hl">git add/commit/push</span> via OpenCode<br>
+    <span class="err">✕ Exit codes · merge conflict intro</span>
+  </td>
+  <td class="out">GitHub repo live · first site · can read files in VS Code</td>
+</tr>
+<tr>
+  <td class="ses">2</td><td class="hr">2h</td>
+  <td class="layer">Domain + PromptAudit</td>
+  <td>
+    <span class="tag tag-c">C</span> HTTPS · browser security indicators<br>
+    <span class="tag tag-s">S</span> SSL cert in URL bar · mixed content<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Add SSL cert to dev server"</span><br>
+    <span class="err">✕ SSL mismatch · mixed content warnings</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> Domain · DNS · hosting<br>
+    <span class="tag tag-s">S</span> <span class="env">dig</span> / <span class="env">nslookup</span> · DNS records<br>
+    <span class="tag tag-b">B</span> <span class="hl">Buy domain · point DNS to server</span><br>
+    <span class="err">✕ DNS not resolving · TTL delays</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> PromptAudit · environments (local vs live)<br>
+    <span class="tag tag-s">S</span> PromptAudit dashboard · <span class="env">git log --oneline</span><br>
+    <span class="tag tag-b">B</span> <span class="hl">Toggle PromptAudit ON · review first 3 prompts</span><br>
+    <span class="err">✕ Proxy not running · port conflicts</span>
+  </td>
+  <td class="out">Domain live · PromptAudit active · every prompt auto-commits + pushes</td>
+</tr>
+
+<!-- ══════════════ WEEK 2 ══════════════ -->
+<tr>
+  <td class="wk" rowspan="2">W2</td>
+  <td class="ses">3</td><td class="hr">2h</td>
+  <td class="layer">Frontend — UI</td>
+  <td>
+    <span class="tag tag-c">C</span> HTML structure · CSS layout · DOM tree<br>
+    <span class="tag tag-s">S</span> DevTools Elements → inspect ANY site · edit CSS live<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Landing page with brand colors, hero, service cards, footer. Mobile-first."</span><br>
+    <span class="err">✕ CSS specificity · missing closing tags</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> Static vs dynamic content<br>
+    <span class="tag tag-s">S</span> Network tab — inspect page asset loading<br>
+    <span class="tag tag-b">B</span> <span class="hl">—</span> (focus frontend)<br>
+    <span class="err">—</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> Commit discipline · descriptive messages<br>
+    <span class="tag tag-s">S</span> <span class="env">git diff</span> — what changed between prompts<br>
+    <span class="tag tag-b">B</span> <span class="hl">Review commit history: what did each prompt do?</span><br>
+    <span class="err">✕ Forgot to commit · uncommitted changes</span>
+  </td>
+  <td class="out">Branded responsive landing page · can inspect ANY site's DOM · reads diffs</td>
+</tr>
+<tr>
+  <td class="ses">4</td><td class="hr">2h</td>
+  <td class="layer">Frontend — Interaction</td>
+  <td>
+    <span class="tag tag-c">C</span> JS events · state · interactivity · components<br>
+    <span class="tag tag-s">S</span> DevTools Console (errors + line#) · Network (XHR/status)<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Mobile hamburger menu, testimonial carousel, pricing components"</span><br>
+    <span class="err">✕ TypeError · null is not object · script 404</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> Client vs server rendering<br>
+    <span class="tag tag-s">S</span> AJAX/fetch calls in Network tab<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Mock API endpoint serving testimonial data"</span><br>
+    <span class="err">✕ CORS · wrong endpoint URL</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> Branching (main vs feature)<br>
+    <span class="tag tag-s">S</span> GitHub PR view · branch switcher<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Feature branch → build carousel → merge to main"</span><br>
+    <span class="err">✕ Merge conflicts (resolve with AI)</span>
+  </td>
+  <td class="out">Interactive site · 3 components · can trace JS errors to line# · knows branches</td>
+</tr>
+
+<!-- ══════════════ WEEK 3 ══════════════ -->
+<tr>
+  <td class="wk" rowspan="2">W3</td>
+  <td class="ses">5</td><td class="hr">2h</td>
+  <td class="layer">Backend + Database</td>
+  <td>
+    <span class="tag tag-c">C</span> Dynamic UI rendering from API<br>
+    <span class="tag tag-s">S</span> DevTools → see API response data in DOM<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Display services list from API on homepage"</span><br>
+    <span class="err">✕ Data not showing · wrong field names</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> Server = kitchen · DB = pantry · logic = recipes<br>
+    <span class="tag tag-s">S</span> Server logs · <span class="env">DB browser</span> → tables/rows/relationships · SELECT<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Customer has many Bookings, Booking belongs to Service. CRUD API."</span><br>
+    <span class="err">✕ Stack trace (file:line) · DB connection refused · query syntax</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> Environment variables · <span class="env">.env</span> for DB URL<br>
+    <span class="tag tag-s">S</span> Read <span class="env">.env</span> · see DB credentials<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Move DB config to .env, add to .gitignore"</span><br>
+    <span class="err">✕ .env not loaded · gitignore missing</span>
+  </td>
+  <td class="out">DB with real data · API endpoints · can read stack traces · .env discipline</td>
+</tr>
+<tr>
+  <td class="ses">6</td><td class="hr">2h</td>
+  <td class="layer">Auth + API Integration</td>
+  <td>
+    <span class="tag tag-c">C</span> Auth UI · login/logout UX<br>
+    <span class="tag tag-s">S</span> Network tab → see auth token in request headers<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Login page, protected booking form, logout button"</span><br>
+    <span class="err">✕ Token expired · redirect loops</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> Auth (passwords/tokens) · API integration<br>
+    <span class="tag tag-s">S</span> Application tab → JWT/cookies · <span class="env">.env</span> for API keys<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Email/password login. Connect booking to WhatsApp API."</span><br>
+    <span class="err">✕ 400/401/403/500 · API key invalid · rate limited</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> Secrets management · never commit API keys<br>
+    <span class="tag tag-s">S</span> Audit <span class="env">.env</span> · check <span class="env">.gitignore</span><br>
+    <span class="tag tag-b">B</span> <span class="hl">"Add webhook endpoint for WhatsApp delivery receipts"</span><br>
+    <span class="err">✕ Secret leaked in client-side code</span>
+  </td>
+  <td class="out">Login + WhatsApp/payment live · can diagnose API errors · .env audit</td>
+</tr>
+
+<!-- ══════════════ WEEK 4 ══════════════ -->
+<tr>
+  <td class="wk" rowspan="2">W4</td>
+  <td class="ses">7</td><td class="hr">2h</td>
+  <td class="layer">Deploy + Security + Analytics</td>
+  <td>
+    <span class="tag tag-c">C</span> Production vs dev · analytics dashboards<br>
+    <span class="tag tag-s">S</span> Live site on real domain · check HTTPS<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Add analytics tracking to all pages"</span><br>
+    <span class="err">✕ Analytics script blocked · wrong tracking ID</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> Production server config<br>
+    <span class="tag tag-s">S</span> Production logs (tail) · build output files<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Deploy to production. Enable HTTPS. Monitor server health."</span><br>
+    <span class="err">✕ Prod error → check logs · deploy rollback</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> Environments (local/staging/prod) · rollback plan<br>
+    <span class="tag tag-s">S</span> Full <span class="env">.env</span> audit · rate limiting test<br>
+    <span class="tag tag-b">B</span> <span class="hl">"Move secrets to .env, add rate limiting, set up Plausible/GA goals"</span><br>
+    <span class="err">✕ Deploy broke something · compare dev vs prod</span>
+  </td>
+  <td class="out">Live HTTPS site · .env secured · analytics tracking · knows rollback strategy</td>
+</tr>
+<tr>
+  <td class="ses">8</td><td class="hr">2h</td>
+  <td class="layer">AI Solo + Handoff</td>
+  <td>
+    <span class="tag tag-c">C</span> AI prompting · context · self-sufficiency<br>
+    <span class="tag tag-s">S</span> Self-review PromptAudit log · full codebase walkthrough<br>
+    <span class="tag tag-b">B</span> <span class="hl">SOLO: "Add a new page with [feature]" — mentor watches silently</span><br>
+    <span class="err">✕ AI hallucination — detect what AI invented</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> When to call for help · scale triggers<br>
+    <span class="tag tag-s">S</span> Community site tour · see what's possible later<br>
+    <span class="tag tag-b">B</span> <span class="hl">Solo feature backend: data model + API + integration</span><br>
+    <span class="err">✕ Solo debugging: apply 5-layer diagnostic flow</span>
+  </td>
+  <td>
+    <span class="tag tag-c">C</span> Managed IT handoff · pricing · what's next<br>
+    <span class="tag tag-s">S</span> PromptAudit graduation report · commit history as portfolio<br>
+    <span class="tag tag-b">B</span> <span class="hl">Community showcase · handoff conversation</span><br>
+    <span class="err">✕ Final: "What if site goes down?" — know response plan</span>
+  </td>
+  <td class="out">Solo capable · networked · clear scale path back to mentor</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<div class="total">
+  <span>Total: <strong>8 sessions × 2h = 16 hours</strong></span>
+  <span>·</span>
+  <span>Every session: <strong style="color:var(--yellow)">prompt → build → READ code → commit → push</strong></span>
+  <span>·</span>
+  <span>Stack: OpenCode + VS Code + Git + GitHub + DevTools + DB Browser</span>
+</div>
+
+</div>
+</body>
+</html>
